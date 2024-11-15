@@ -2,9 +2,12 @@
 
 The application *shiny rrisk* is a tool for writing and documenting stochastic quantitaive exposure- and risk models and assessments.
 
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="../cute_star.png">
- <source media="(prefers-color-scheme: light)" srcset="../cute_star.png">
- <img alt="YOUR-ALT-TEXT" src="../cute_star.png">
-</picture>
+<img src="images/cute_star.png" alt="Ein schöner Stern" width="200" height="200">
+
+## How to use the manual
+
+$$
+x = \sum_{i=1}^n y_i
+$$
+
 
