@@ -25,4 +25,14 @@ model$add_node(node_name     = "risk",
 ```
 
 I added a node named *risk* that containes a user defined expression. Here the risk of getting sick after ingesting a certain dose of a microbe or substance (later we will refine
-this node by using the numerical better expression `-expm1(-r*dose)`
+this node by using the numerical better expression `-expm1(-r*dose)`).
+
+We can plot the model graph with:
+
+```R
+model$plot_model_graph()
+```
+
+The output should look like this:
+
+![My first model graph](images/first_model_plot.png)
