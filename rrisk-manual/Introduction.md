@@ -2,7 +2,7 @@
 
 The software rrisk allows the writing of complex exposure and risk models and assessment, and their documentation, in R.
 
-## Quik start
+## Quick start
 
 First source rrisk.
 
@@ -24,8 +24,7 @@ model$add_node(node_name     = "risk",
                user_def_expr = "1 - exp(-r * dose)")
 ```
 
-I added a node named *risk* that containes a user defined expression. Here the risk of getting sick after ingesting a certain dose of a microbe or substance (later we will refine
-this node by using the numerical better expression `-expm1(-r*dose)`).
+I added a node named *risk* that containes a user defined expression. Here the node risk contains a simple model equation for getting sick after ingesting a certain dose of a microbe or substance (later we will refine this node by using the numerical better expression `-expm1(-r*dose)`).
 
 We can plot the model graph with:
 
@@ -42,10 +41,21 @@ The output should look like this:
 
 The graph contains already three nodes: the user added node `risk`, and the two nodes `r` and `dose`. The last two nodes were implicitly defined by the user through the `user_def_expr`.
 
+The node `risk` is a so-called end node, as it is at the end of graph. Usually, these nodes contain the outcome of interest.
+
 We can check the content of the model by prinint the nodes as a data frame:
 
 ```R
 model$get_df_nodes()
 ```
+
+The result should look like this:
+
+<div class="img-with-text">
+    <img src="images/data_frame_node_content.PNG" alt="The current model as a table" width="800">
+    <p>The current model as a data frame</p>
+</div>
+
+The table shows what information is already added to the model. We can add more information to each node as we currently did.
 
 
