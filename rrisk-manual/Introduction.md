@@ -58,4 +58,6 @@ The result should look like this:
 
 The table shows what information is already added to the model. We can add more information to each node as we currently did.
 
-
+```R
+model$check_model()
+```
