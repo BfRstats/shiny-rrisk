@@ -41,9 +41,9 @@ The output should look like this:
 
 The graph contains already three nodes: the user added node `risk`, and the two nodes `r` and `dose`. The last two nodes were implicitly defined by the user through the `user_def_expr`.
 
-The node `risk` is a so-called end node, as it is at the end of graph. Usually, these nodes contain the outcome of interest.
+The node `risk` is a so-called *end node*, as it is at the end of graph. Usually, these nodes contain the outcome of interest.
 
-We can check the content of the model by prinint the nodes as a data frame:
+We can check the content of the model by printing the nodes as a data frame:
 
 ```R
 model$get_df_nodes()
@@ -58,6 +58,45 @@ The result should look like this:
 
 The table shows what information is already added to the model. We can add more information to each node as we currently did.
 
+We can check the model:
+
 ```R
 model$check_model()
+```
+
+<div class="img-with-text">
+    <img src="images/quick_start_check_model.PNG" alt="check model graph output" width="800">
+    <p>The result of this model check: the model is not fully specified, as <i>r</i> and <i>dose</i> are not fully defined yet.</p>
+</div>
+
+We add the missing to nodes. Both nodes are containing a parametric distribution. In rrisk, a so-called 2D-Monte-Carlo simulation is possible. Here we put the distribution for `dose`on the first MC dimension, and the distribution for `r` and the second MC dimension. The first MC dimension is often associated with a variable, and the second MC dimension with a uncertain variable.
+
+```R
+model$add_node(node_name  = "dose",
+               param_dist = list(name = "pert",
+                                 def  = list(min   = 10,
+                                             mode  = 30,
+                                             max   = 100,
+                                             shape = 4)),
+               mc_dim     = 1L)
+
+model$add_node(node_name  = "r",
+               param_dist = list(name = "triang",
+                                 def  = list(min  = 1e-5,
+                                             mode = 1e-4,
+                                             max  = 1e-3)),
+               mc_dim     = 2L)
+```
+
+The model is no fully determined.
+
+```R
+model$run_simulation()
+```
+
+Results for `risk`
+
+```R
+model$plot_histogram("risk")
+model$plot_ecdf("risk")
 ```
