@@ -35,4 +35,7 @@ model$plot_model_graph()
 
 The output should look like this:
 
-![My first model graph](images/first_model_plot.png)
+<div class="img-with-text">
+    <img src="images/first_model_plot.png" alt="First plot of model graph" width="800">
+    <p>Plot of model graph. It contains the defined node <i>risk</i>, and additionally the two implictly defined nodes <i>r</i> and <i>dose</i></p>
+</div>
