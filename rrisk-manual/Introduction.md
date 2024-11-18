@@ -39,3 +39,13 @@ The output should look like this:
     <img src="images/first_model_plot.png" alt="First plot of model graph" width="800">
     <p>Plot of model graph. It contains the defined node <i>risk</i>, and additionally the two implictly defined nodes <i>r</i> and <i>dose</i></p>
 </div>
+
+The graph contains already three nodes: the user added node `risk`, and the two nodes `r` and `dose`. The last two nodes were implicitly defined by the user through the `user_def_expr`.
+
+We can check the content of the model by prinint the nodes as a data frame:
+
+```R
+model$get_df_nodes()
+```
+
+
