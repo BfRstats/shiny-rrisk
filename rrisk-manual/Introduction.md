@@ -17,6 +17,8 @@ The main object in rrisk is the `rriskModelClass`. You can then instanciated a n
 model <- rriskModelClass$new()
 ```
 
+### Build a model
+
 Then you can fill the new model:
 
 ```R
@@ -90,13 +92,33 @@ model$add_node(node_name  = "r",
 
 The model is no fully determined.
 
+### Run simulation and evaluate results
+
 ```R
 model$run_simulation()
 ```
 
-Results for `risk`
+Get a summary of the results for node `risk`:
+
+```R
+model$get_result_summary("risk")
+```
+
+<div class="img-with-text">
+    <img src="images/first_result_summary.PNG" alt="first result summary table" width="600">
+    <p>Result summary for node <i>risk</i></p>
+</div>
+
+Result plots for `risk`
+
+Histogram as approximation for the probability distribution function.
 
 ```R
 model$plot_histogram("risk")
+```
+
+empirical cumulative distriution function
+
+```
 model$plot_ecdf("risk")
 ```
