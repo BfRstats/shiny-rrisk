@@ -116,9 +116,18 @@ Histogram as approximation for the probability distribution function.
 ```R
 model$plot_histogram("risk")
 ```
+<div class="img-with-text">
+    <img src="images/histogram_simple_model.png" alt="Histogram for node risk" width="600">
+    <p>Histogram for node <i>risk</i></p>
+</div>
 
 empirical cumulative distriution function
 
-```
+```R
 model$plot_ecdf("risk")
 ```
+
+<div class="img-with-text">
+    <img src="images/ecdf_simple_model.png" alt="Empirical cumulative distribution function for node risk" width="600">
+    <p>Empirical cumulative distribution function for node <i>risk</i></p>
+</div>
