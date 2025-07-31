@@ -1,0 +1,1264 @@
+{
+  "type": "list",
+  "attributes": {
+    "names": {
+      "type": "character",
+      "attributes": {},
+      "value": ["file_version", "node_list", "param_list", "global_expr", "global_expr_info", "author_list", "model_descr", "model_name"]
+    }
+  },
+  "value": [
+    {
+      "type": "double",
+      "attributes": {},
+      "value": [2]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["I", "M", "C", "F", "J", "lambda", "G", "K", "L", "Y", "Xmean", "X", "Xsd"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["J * lambda/G"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["J * lambda / G"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["mg ARS /kg eel; applies to individual eel"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Concentration of ARS in edible tissues at time of catch. Intake of eel marker [mg] per consumed [kg] eel. The quantity is estimated using the total amount of ARS used for marking J, the tissue distribution factor lambda and the weight of eel at catch G.   \n\n**Assumption:** Total uptake of ARS from the incubation solution at time of marking and no excretion during life span.  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Intake"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["C * F"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["C * F"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["g eel / kg body weight and year"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Mean consumption of European eel per year per body weight. This quantity is the product of the mean individual intake of eel C and the frequency of consumptions events per year F. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Intake"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rnorm(n = ITER1D, mean = Xmean, sd = Xsd, lower = 0, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["gaussian(mean = Xmean, sd = Xsd, lower = 0)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["g eel / kg body weight and meal portion"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Population variability in consumption of eel per body weight consumed on single meal modeled as Normal distribution. Parameter uncertainty is accounted for through using non-parametric bootstrap (bs) distribution for the mean and standard deviation of this distribution. Note that measurement error of this quantity due to using a photographic atlas is not accounted for. In contrast, EFSA et al. (2018) have used a nested bootstrap estimation to account for a relative standard deviation of 100 % in recording portion sizes using a photo guide. This relies on estimating an error distribution based on a single observation and was not implemented here.\n\n**Assumption:** A Normal distribution for individual consumption is assumed although this may result in negative outcomes. The alternative uniform [0.01,100] distribution may be used to investigate the effect of distribution shape.  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Consumption"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["gaussian"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean", "sd", "lower"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["Xmean"]
+                    },
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["Xsd"]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["2 * 365.25/7"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["2 * 365.25 / 7"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Ehlscheid et al. (2014)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Frequency of eel consumption per year. Empirical information was collected via telephone interviews of persons 14+ years of age in Germany about rarely consumed foods in 2011 (Ehlscheid et al., 2014). Out of 1004 persons 34% reported eel consumption at least once during a one year period. 12 persons (1.2%) claimed to have eaten eel once per week, and one person reported to have eaten eel 2-3 per week. EFSA et al. (2018) have derived a conservative value of two consumption events per week from these data, which is then multiplied with 365.25/7 to obtain the assumed consumption events per year.\n\n**Assumption:** EFSA et al. (2018) have assessed about 18 aspect of uncertainties for frequency of eel consumption. The largest uncertainty range was assigned based on reasoning as described for item X. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Consumption"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_runif(n = ITER1D, min = 0, max = 60, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["unif(min = 0, max = 60)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["mg ARS /eel; applies to individual eel"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Simon et al. (2009), Neukamm (2009), Caraguel et al. (2015), Kullmann et al. (2017)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Total amount of ARS taken up per eel during marking. The minimum possible value of this unknown quantity is 0 (zero). The maximum is derived as product of the volume of incubation solution per eel and the ARS concentration of the solution. Different experimental designs regarding the amount of water and number of eels were tested with ARS (Kullmann et al., 2017). The design that maximises the amount of water per eel was 10 m^3 water with 200 kg eel, which translates to 0.4 l per eel. Using a typical ARS concentration of 150 mg/l (Kullmann et al., 2017) results in the maximum value of 60 mg per eel. Alternatively, the ARS concentration for marking C and the volume of one eel at time of marking could be used. Assuming a length at time of catch *L*, a radius of r=2 cm and cylindrical form at time of marking makes this approach extremely conservative. The resulting value of *C* * pi * r^2 * *L* = 94.5 mg is used as maximum plausible value for *J* in comparison to the uniform distribution between 0 and 60 mg.\n\n**Assumptions:**\tThe total amount of ARS is taken up in eel tissues from the incubation solution at time of marking. The upper value for the assumed range reflects that all ARS in the solution is absorbed by the eel, which is an extreme assumption for illustrative purpose. While the degree of uncertainty is not assessed, the lack of confidence in the data low (at least there is data). EFSA et al. (2018) have assessed about 18 aspect of uncertainties for ARS concentration in edible tissues, which is reflected in this item. The largest uncertainty range was assigned due to absence of measurements if ARS in eel tissue. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Occurrence"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unif"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [60]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_runif(n = ITER1D, min = 0, max = 1, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["unif(min = 0, max = 1)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [" Tissue distribution factor (proportion) of ARS deposited in edible eel tissue after incubation for the purpose of eel marking. It is known that ARS forms complexes with calcium and may therefore may be deposited in the bones. Due to the lack of knowledge on the tissue distribution and in order to demonstrate the effect of this factor in the model, a uniform distribution between 0 and 1 is assumed as probability distribution.\n\n**Assumptions:** Any value between the chosen minimum and maximum may apply with an equal probability.  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Occurrence"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unif"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [1]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["K * L^3/100"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["K * L^3/100"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["g eel; applies to one eel"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Weight of eel at catch. Estimated using Fulton’s condition factor and length of eel.  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Occurrence"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rnorm(n = ITER1D, mean = 0.16, sd = 0.004, lower = 0, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["gaussian(mean = 0.16, sd = 0.004, lower = 0)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["g eel/cm^3; applies to one individual eel"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Simon (2007)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Fulton’s condition factor describing the relationship between fish weight and length. According to EFSA et al. (2018), different ranges for K have been reported: 0.17-0.22 in (Durif et al., 2005), 0.16-0.18 in Simon (2007) and 0.19-0.21 in Stein et al. (2016). The smallest value K=0.16 g/cm^3 with a standard deviation of 0.026 g/cm^3 as reported for Jungfernsee in Germany (Simon, 2007) was chosen for the intake estimation. Based on a sample size of 50 a standard error of 0.004 g/cm^3 can be inferred, leading to a normal distribution with mean 0.16 and standard deviation 0.004 representing the uncertainty of K. Plausible minimum and maximum values for K are set to half the minimum observed range and twice the maximum observed value, respectively.\n\n**Assumptions:**\tChoosing the smallest observed empirical mean value avoids the risk of underestimating the ARS tissue concentration.  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Occurrence"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["gaussian"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean", "sd", "lower"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.16]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.004]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [50]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["50"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["cm; applies to one individual eel"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Length of eel at time of catch. This quantity is used to estimate the weight of eel at time of catch *G* using Fulton’s condition factor. In most parts of Germany, the minimum length of eels for fishery is 50 cm. The uncertainty of this quantity has not been quantified.\n\n**Assumptions:**\tEels with length less than 50 cm are practically not captured for human consumption.   "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Occurrence"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["I * M"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["I * M"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["mg ARS / kg body weight and year"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Dietary intake of ARS per kg body weight and year through consumption of eel marked with ARS. This is the outcome of the model.\n\n**Assumptions:** This outcome relies on many assumptions, the most important being that all ARS available in the solution to mark released eel is taken up by the eel and that all consumption refers to such marked eel. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Intake"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["bootstrap_result"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["X[[\"Xmean\"]]"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["X[['Xmean']]"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Consumption"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [2]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["bootstrap"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["do_bootstrapping(n = ITER2D, input = X, func_list = list(mean = mean, ", "    sd = sd))"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["bootstrap_generator()"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["g eel per day and kg bw; applies to one individual consumer"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Nonparametric bootstrap for individual consumption data of eel per kg body weight derived from 24h-recall data of the German National Consumption Survey II (MRI, 2008). Only 19 participants reported any consumption of eel. Individual consumption has been calculated using individual portion size and body weight. These 19 values are the original observations used for bootstrapping.    \n\n**Uncertainty assessment:** There is not enough information in these source data to fit the distribution empirically. Schendel et al. (2018) have assessed about 18 aspects of uncertainty for eel portion size, which is reflected in this item. The largest uncertainty range was assigned because of measurement error. 24h recall data is not considered suitable for rarely consumed food (leads to small number of consumption events). Moreover, it was not specified if European eel or other eel was consumed, which overestimates consumption of European eel. Furthermore, portion weight was estimated using a picture book. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Consumption"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [2]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["data", "sum_stats"]
+                }
+              },
+              "value": [
+                {
+                  "type": "double",
+                  "attributes": {},
+                  "value": [0.496, 1.236, 0.633, 0.886, 1.105, 1.67, 1.62, 0.46, 0.304, 0.782, 1.243, 0.74, 0.456, 0.52, 0.813, 0.785, 0.46, 1.605, 0.85]
+                },
+                {
+                  "type": "list",
+                  "attributes": {},
+                  "value": [
+                    {
+                      "type": "list",
+                      "attributes": {
+                        "names": {
+                          "type": "character",
+                          "attributes": {},
+                          "value": ["func_name", "result_vars"]
+                        }
+                      },
+                      "value": [
+                        {
+                          "type": "character",
+                          "attributes": {},
+                          "value": ["mean"]
+                        },
+                        {
+                          "type": "character",
+                          "attributes": {},
+                          "value": ["Xmean"]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "attributes": {
+                        "names": {
+                          "type": "character",
+                          "attributes": {},
+                          "value": ["func_name", "result_vars"]
+                        }
+                      },
+                      "value": [
+                        {
+                          "type": "character",
+                          "attributes": {},
+                          "value": ["sd"]
+                        },
+                        {
+                          "type": "character",
+                          "attributes": {},
+                          "value": ["Xsd"]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["bootstrap_result"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["X[[\"Xsd\"]]"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["X[['Xsd']]"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Consumption"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [2]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["1DMC", "2DMC", "SEED", "QUANTILES", "QUANTILES_2D", "QUANTILE_TYPE"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [100000]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "ITER2D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [5000]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [500]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "integer",
+          "attributes": {},
+          "value": [42]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.05, 0.25, 0.5, 0.75, 0.95]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.025, 0.5, 0.975]
+        },
+        {
+          "type": "integer",
+          "attributes": {},
+          "value": [8]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {},
+      "value": []
+    },
+    {
+      "type": "list",
+      "attributes": {},
+      "value": []
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["Robert Opitz", "Matthias Greiner"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Robert Opitz"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Bundesinstitut für Risikobewertung (BfR)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["robert.opitz@bfr.bund.de"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Matthias Greiner"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["German Federal Institute for Risk Assessment (BfR) "]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["matthias.greiner@bfr.bund.de"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["# Preamble \nThis implementation of the model is based on an example provided in the “Guidelines for Uncertainty Analysis: Application of the respective Documents of EFSA and BfR for Exposure Assessments” by [Schendel et al., 2018, (pp. 38-64)](10.2903/sp.efsa.2018.EN-1472). The following documentation is an edited version of the information provided in the original source. \nThis document is an annex to the project report for the action “Critical appraisal tool (CAT) for the evaluation of evidence from animal observational epidemiological studies and test of a risk modelling tool (Rrisk) in the context of EFSA” (SA13 FPA GP/EFSA/AMU/2020/02). \n\n# Abbreviations\nARS: Alizarin red S, bs: bootstrap\n\n# Background\nThe European eel (*Anguilla anguilla*) is a critically endangered species. One popular measure to increase eel population in inland waters is restocking, where young eels are caught in estuaries and released in inland waters. In order to monitor the efficiency of this measure, these eels can be marked, e.g. with alizarin red S (ARS) or strontium chloride. These marker substances get incorporated in the skeleton and can later on be detected via microscopy and enable researchers to estimate the proportion of released eels. There is no sufficient data available on occurrence of ARS in consumed eel as well as on eel consumption in Germany. For ARS, there is also no sufficiently reliable data available to assess its toxicity.\n\n# Objectives\nThe objective of the model is to quantify the possible intake of ARS through consumption of eel that has been marked with ARS based on limited available information as a proxy of possible exposure for consumers in Germany. The most relevant sources of uncertainties should be identified.\n\n# Scope\nThe limited data does not permit a proper exposure assessment. Exposure with strontium chloride, which is also used in marking of eel is not evaluated in this model. Furthermore, due to absence of toxicological information, a risk estimation for ARS through consumption of marked eel is beyond the scope of this assessment.\n\n# Model description\nThe first part of the model is referred to as Occurrence and describes the concentration of ARS in edible eel tissue to be considered in an exposure (i.e. intake according to the scope) assessment for consumers in Germany. For the purpose of marking, young eels (glass-eels) are placed into a solution containing ARS for a time period ranging from several hours up to one day. There are no available measurements of the intake of marker substance per eel. The ARS concentration at the time of eel consumption might be estimated using the (assumed known) ARS concentration *C* in the incubation solution, the weight gain between time of ARS incubation and catch and a factor *lambda* that describes the proportion of ARS deposited in edible tissues. However, since the ARS distribution in tissue compartments is unknown, [Schendel et al., 2018](10.2903/sp.efsa.2018.EN-1472) have chosen a more conservative approach by introducing a factor that describes the proportion of available ARS that is absorbed by the eels. This approach still requires estimation of the eel weight at time of catch. This approach is followed here for the sake of comparability. The second part, Consumption, aims at estimating the long-term average annual consumption of eel per body weight *M* under the assumption that all eel consumed is sourced from areas relevant for this assessment. The consumption is estimated from individual eel portion size per body weight *X* and the frequency of eel consumption *F* in Germany. The third part, Intake, provides as outcome of the model the estimated intake *Y* as a crude proxy of exposure.\n\n# Uncertainty assessment and sensitivity analysis\n\n## Scenario uncertainties\nThis section summarises the qualitative assessments of scenario uncertainties. \n\n**Agents.** No information has been found of whether the noxious agent (ARS) primarily occurs in combination with other hazardous noxious agents so that it is to be viewed as the indicator substance of a group of noxious agents. As described in the scope, the marking of eel with strontium has not been considered here. \n\n**Sources.** Typical values for the concentrations of ARS in water are given in literature, but it cannot be excluded that in practice also other concentrations are used. For ARS, reduction via binding with other ions in water is reported, but degree of this effect not known. Thus, the source is known but quantification is problematic. However, a driving factor for uncertainty is that the fraction of marked European eel of the overall eel consumption is completely unknown. The assumption that all consumed eel is marked is assumed to be very conservative. \n\n**Populations.** The human target population consists of consumers of eel in Germany. Only a few participants of the consumption survey and telephone interviews reported eel consumption. Despite the sparsity of data (which is quantified in this model using a bootstrap for mean intake), the study and target population is not considered a major source of uncertainty. However, children, which are not included in the consumption data might have considerable higher exposure due to their lower body weight, which constitutes a relevant bias. Furthermore, the sample size is too small to capture persons with specific dietary habits (e.g., anglers). \n\n**Microenvironment.** The process of marking of eels could be described as compartmental model (marking solution, edible tissue, non-edible tissue). This results in an uncertainty, which may not sufficiently quantified via the respective model parameters. \n\n**Time.** The grow h of eel results in dilution of ARS deposed in edible tissues. The effect is not assumed to be huge but may not sufficiently be covered by the respective model parameters. \n\n**Activities. ** The variability of average daily consumed eel weight in case of eel consumption for individual consumers has been ignored. However, it is assumed that this has little effect on the outcome. The data is too sparse to test this assumption. \n\n**Pathways.** The exposure pathway is via intake of eel. There is no uncertainty related to pathways. \n\n**Space.** The measured exposure events do not discriminate whether European or other eel species are consumed, which may affect the fraction of marked eel. A marked over-estimation is possible. \n\n## Modelling approach uncertainties\nThis section summarises the qualitative assessments of modelling approach uncertainties. \n\n**Concept.** The concept of the model is not considered as a relevant source of uncertainty. \n\n**Structure.** The model structure and equations are not considered as relevant source of uncertainty.\n\n**Dependencies.** Correlation between frequency of eel consumption and amount of daily consumed eel in case of a consumption incidence may distort the results. The effect and direction of potential bias due to omission of a potential correlation as well as confidence and subjectivity have not been assessed. \n\n**Outcome.** The toxicological properties of ARS in humans are largely unknown. \n\n## Other uncertainties\nThis section summarises the qualitative assessments of other uncertainties. \n\n**Question formulation.** The question formulation is sufficiently precise for the purpose of exposure assessment.  \n\n**Context.** The (original) model was developed to support an answer to a request from the German Federal Ministry of Food and Agriculture. There is no ambiguity of the context of this question. \n\n**Protection perspective.** Consumer health is the protection perspective for this assignment and there is no uncertainty related to this. \n\n**Population group.** The population as a whole is to be protected. Due to the lack of data on human toxicity there is some uncertainty whether age group-specific estimates would have been more appropriate to answer the risk question.\n\n**Protection goal.** The avoidance of adverse health effects is the protection goal beyond any doubt. \n\n**Protection level.** The protection level is not specified. This could be considered as source of uncertainty although a full exposure assessment has not been conducted.\n\n**Scope.** There is no uncertainty due to possible exclusion of questions, such as additional exposure routes. \n\n# Conclusions\nThe implementation of the [Schendel et al., 2018, (pp. 38-64)](10.2903/sp.efsa.2018.EN-1472) model demonstrates shiny rrisk’s capability \n\n* To define, run and document two-dimensional Monte-Carlo models for probabilistic risk modelling accounting for parameter variability and uncertainty,\n* To use bootstrap for quantifying parameter uncertainty (shown at the example of a joint bootstrap distribution for the mean and standard deviation of input data),\n* To accommodate various documentary and editorial needs, including optional sections for abbreviations, background, objectives, scope, model description, uncertainty assessment, acknowledgement and references.\n\n# Acknowledgement \nWe thank Dr. Thomas Schendel for reviewing the implementation of his model in an earlier version of shiny rrisk.\n\n# References\nCaraguel JM, Charrier F, Mazel V, Feunteun E (2015). Mass marking of stocked European glass eels (*Anguilla Anguilla*) with alizarin red S. Ecol Freshw Fish, 24 (3): 435-442. doi: DOI 10.1111/eff.12158\n\nSchendel T, Jung C, Lindtner O and Greiner M, 2018. Guidelines for Uncertainty Analysis: Application of the respective documents of EFSA and BfR for exposure assessments. EFSA supporting publication 2018: EN-1472. 113 pp. doi:10.2903/sp.efsa.2018.EN-1472\n\nEhlscheid N, Lindtner O, Berg K, Blume K, Sommerfeld C, Heinemeyer G (2014). Selten verzehrte Lebensmittel in der Risikobewertung. Ergebnisse einer Telefonbefragung in Deutschland. Proceedings of the German Nutrition Society.\n\nKullmann B, Neukamm R, Thiel R (2017). Mass-marking of farmed European eels (Anguilla anguilla (Linnaeus, 1758)) with alizarin red S. Journal of Applied Ichthyology, 33 (5): 914-917. doi:10.1111/jai.13424\n\nMRI (2008). Nationale Verzehrsstudie II – Die bundesweite Befragung zur Ernährung von Jugendlichen und Erwachsenen. Ergebnisbericht, Teil 1 & Ergänzungsband: Ausgewählte Ergebnisse nach Schichtindex. Report, xxvi+144 & 20 pages. Karlsruhe DE: Max Rubner-Institut – Bundesforschungsinstitut für Ernährung und Lebensmittel. Retrieved from https://www.mri.bund.de/fileadmin/MRI/Institute/EV/NVS_II_Abschlussbericht_Teil_1_mit_Ergaenzungsbericht.pdf, accessed: 2013-05-28.\n\nNeukamm R (2009). FIAF-Pilotprojekt zur Förderung des Aales in den Gewässersystemen Nord-Ostsee-Kanal und Elbe-Lübeck-Kanal. Vol. 2017. Report. Retrieved from http://angelgewaesser.lsfv-sh.de/images/downloads/Jahresbericht_2006-2008_FIAF.pdf, accessed: 11-10-2017.\n\nSimon J (2007). Age, growth, and condition of European eel (Anguilla anguilla) from six lakes in the River Havel system (Germany). Ices Journal of Marine Science, 64 (7): 1414-1422. doi:10.1093/icesjms/fsm093\nSimon J, Dorner H, Richter C (2009). Growth and mortality of European glass eel Anguilla anguilla marked with oxytetracycline and alizarin red. J Fish Biol, 74 (1): 289-295. doi:10.1111/j.1095-8649.2008.02117.x\n"]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["Alizarin red S in Eel"]
+    }
+  ]
+}

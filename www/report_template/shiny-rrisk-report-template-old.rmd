@@ -1,0 +1,187 @@
+---
+title: 'Automatic report for "`r params$report_title`"'
+date: '`r format(Sys.Date(),"%Y-%B-%d")`'
+output: 
+  word_document:
+    reference_docx: "shiny-rrisk-report-style-template.docx"
+params:
+  report_title: NA
+  author_list: NA
+  model_descr: NA
+  mc_settings: NA
+  model_graph: NA
+  node_graphs: NA
+  cor_graphs: NA
+  df_nodes: NA
+  node_list: NA
+  end_nodes: NA
+  df_global_obj: NA
+  result_summary: NA
+---
+
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, 
+                      message = FALSE,
+                      knitr.graphics.rel_path = FALSE)
+options(warn = -1)
+library(flextable)
+page_width <- 172 # mm body
+# set width of pictures
+pic_width <- "70" # mm
+```
+
+# Authors
+
+```{r print_authors, echo = FALSE, results = "asis"}
+for (author in params$author_list)
+  cat("**Name:**        ", author$name, "  \n", 
+      "**Institution:** ", author$institution, "  \n", 
+      "**E-Mail:**      ", author$email, "  \n\n")
+```
+
+# Model description
+
+```{r print_model_description, echo = FALSE, results = "asis"}
+cat(params$model_descr, "\n\n")
+```
+
+# MC simulation settings
+
+```{r print_mc_settings, echo = FALSE, results = "asis"}
+if (params$mc_settings$MC_TYPE == "1DMC") {
+  cat("1D Monte-Carlo simulation with", params$mc_settings$ITER1D, 
+      "iterations and sampling type:", params$mc_settings$SAMPLING_TYPE, ".\n")
+} else if (params$mc_settings$MC_TYPE == "2DMC") {
+  cat("2D Monte-Carlo simulation with", params$mc_settings$ITER1D, 
+      "iterations in first dimension, and", params$mc_settings$ITER2D,
+      "iterations in second dimension.\n",
+      "Sampling type for first dimension:", params$mc_settings$SAMPLING_TYPE, ".\n",
+      "Sampling type for second dimension: Monte-Carlo.\n")
+} else {
+  cat("No Monte-Carlo simulation, as there are no Monte-Carlo items in the model.\n")
+}
+cat("The seed value was set to: ", params$mc_settings$MC_SEED, ".\n")
+```
+
+# Model graph
+
+```{r show_model_graph, echo = FALSE, fig.cap = "Plot of the model graph", out.width = "90%"}
+if (file.exists(params$model_graph))
+  knitr::include_graphics(params$model_graph)
+```
+
+\newpage
+
+# Model table
+
+```{r df_nodes B, echo = FALSE}
+# exclude 6 column of df_nodes; that column contains description infos, and
+# node type
+fit_to_width(x         = qflextable(data = params$df_nodes[,-c(6,7)]),
+             max_width = page_width,
+             unit      = "mm")
+```
+
+```{r add_new_page_if_user_expr, echo = FALSE, results = "asis"}
+if (nrow(params$df_global_obj) > 0) cat('\\newpage')
+```
+
+```{r df_global_obj, echo = FALSE}
+if (nrow(params$df_global_obj) > 0)
+  fit_to_width(x         = qflextable(data = params$df_global_obj),
+               max_width = page_width,
+               unit      = "mm")
+```
+
+\newpage
+
+# End nodes
+
+```{r end_nodes_and_plots, echo = FALSE, results = 'asis'}
+for (node in params$node_list[params$end_nodes]) {
+  cat('\n\n## Summary for Node ', node$name, '\n\n',
+      '**Expression:**', node$code, '\n\n',
+      '**Unit:**', node$info$unit, '\n\n',
+      '**Source:**', node$info$source, '\n\n',
+      '**Descpription:**', node$info$descr, '\n\n')
+  # plot in normal scale if possible
+  if (!is.null(params$node_graphs[["convergence"]][[node$name]])) {
+    cat("\n\n")
+    print(knitr::kable(params$result_summary[[node$name]]))
+    cat("\n\n")
+    cat("**Linear scale plot**\n\n")
+    cat(#'![Convergence ', node$name,'](',
+        #params$node_graphs[["convergence"]][[node$name]],
+        #paste0('){width=',pic_width,'mm}'),
+        '![Histogram ', node$name,'](',
+        params$node_graphs[["histogram"]][[node$name]],
+        paste0('){width=',pic_width,'mm}'),
+        '![ECDF ', node$name,'](',
+        params$node_graphs[["ecdf"]][[node$name]],
+        paste0('){width=',pic_width,'mm}\n\n'))
+  }
+  # plot in log10 scale if possible
+  if (!is.null(params$node_graphs[["log10_convergence"]][[node$name]]) &&
+    file.exists(params$node_graphs[["log10_convergence"]][[node$name]])) {
+    cat("**log10 scale plot**\n\n")
+    cat(#'![log10 Convergence ', node$name,'](',
+        #params$node_graphs[["log10_convergence"]][[node$name]],
+        #paste0('){width=',pic_width,'mm}'),
+        '![log10 Histogram ', node$name,'](',
+        params$node_graphs[["log10_histogram"]][[node$name]],
+        paste0('){width=',pic_width,'mm}'),
+        '![log10 ECDF ', node$name,'](',
+        params$node_graphs[["log10_ecdf"]][[node$name]],
+        paste0('){width=',pic_width,'mm}\n\n'))
+  }
+  # plot cor graph
+  cat("**cor graph**\n\n")
+  cat('![cor plot ', node$name,'](',
+      params$cor_graphs[[node$name]],'){width=140mm}\n\n')
+  cat("\\newpage")
+}
+```
+
+# Other nodes
+
+```{r nodes_and_plots, echo = FALSE, results = 'asis'}
+non_end_nodes <- !(names(params$node_list) %in% params$end_nodes)
+for (node in params$node_list[non_end_nodes]) {
+  cat('\n\n## Summary for Node ', node$name, '\n\n',
+      '**Expression:**', node$code, '\n\n',
+      '**Unit:**', node$info$unit, '\n\n',
+      '**Source:**', node$info$source, '\n\n',
+      '**Descpription:**', node$info$descr, '\n\n')
+  # plot in normal scale if possible
+  if (!is.null(params$node_graphs[["convergence"]][[node$name]])) {
+    cat("\n\n")
+    print(knitr::kable(params$result_summary[[node$name]]))
+    cat("\n\n")
+    cat("**Linear scale plot**\n\n")
+    cat(#'![Convergence ', node$name,'](',
+        #params$node_graphs[["convergence"]][[node$name]],
+        #paste0('){width=',pic_width,'mm}'),
+        '![Histogram ', node$name,'](',
+        params$node_graphs[["histogram"]][[node$name]],
+        paste0('){width=',pic_width,'mm}'),
+        '![ECDF ', node$name,'](',
+        params$node_graphs[["ecdf"]][[node$name]],
+        paste0('){width=',pic_width,'mm}\n\n'))
+  }
+  # plot in log10 scale if possible
+  if (!is.null(params$node_graphs[["log10_convergence"]][[node$name]]) &&
+    file.exists(params$node_graphs[["log10_convergence"]][[node$name]])) {
+    cat("**log10 scale plot**\n\n")
+    cat(#'![log10 Convergence ', node$name,'](',
+        #params$node_graphs[["log10_convergence"]][[node$name]],
+        #paste0('){width=',pic_width,'mm}'),
+        '![log10 Histogram ', node$name,'](',
+        params$node_graphs[["log10_histogram"]][[node$name]],
+        paste0('){width=',pic_width,'mm}'),
+        '![log10 ECDF ', node$name,'](',
+        params$node_graphs[["log10_ecdf"]][[node$name]],
+        paste0('){width=',pic_width,'mm}\n\n'))
+  }
+  cat("\\newpage")
+}
+```

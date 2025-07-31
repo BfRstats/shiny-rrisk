@@ -1,0 +1,1759 @@
+{
+  "type": "list",
+  "attributes": {
+    "names": {
+      "type": "character",
+      "attributes": {},
+      "value": ["file_version", "node_list", "param_list", "global_expr", "global_expr_info", "author_list", "model_descr", "model_name"]
+    }
+  },
+  "value": [
+    {
+      "type": "double",
+      "attributes": {},
+      "value": [3]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["D_dist", "S", "LMC_home", "LMC_SM", "T_home", "t_home", "LMC_truck", "T_SM", "t_SM", "LMC_initial", "T_truck", "t_truck", "LMC_milk", "cheese_yield", "r_v", "r_g", "risk_v", "risk_g"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rpois(n = ITER1D, lambda = S * LMC_home, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["poisson(lambda = S * LMC_home)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Condolero et al. (2017)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Amount, or dose, of ingested L. monocytognes per serving  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["dose-response"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["poisson"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["lambda"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["S * LMC_home"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rtriang(n = ITER1D, min = 20, mode = 30, max = 60, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["triang(min = 20, mode = 30, max = 60)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Carlos et al. (2008)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Serving size in grams. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["dose-response"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["triang"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [20]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [30]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [60]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["LMC_SM * exp(growth_rate(T_home) * t_home)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["LMC_SM * exp(growth_rate(T_home) * t_home)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU/g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Conc. of L. monocytogenes in the cheese at home."]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["transport and storage", "home"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["LMC_truck * exp(growth_rate(T_SM) * t_SM)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["LMC_truck * exp(growth_rate(T_SM) * t_SM)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU/g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Conc. of L. monocytogenes in the cheese at retail."]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["transport and storage", "retail"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_runif(n = ITER1D, min = 3.04, max = 10.82, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["unif(min = 3.04, max = 10.82)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["°C"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Silva et al. (2008)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Temperature distribution in home fridge. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["transport and storage", "home"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unif"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [3.04]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [10.82]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rtriang(n = ITER1D, min = 0, mode = 3, max = 10, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["triang(min = 0, mode = 3, max = 10)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["days"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Assumption"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Storage time distribution at home fridge. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["transport and storage", "home"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["triang"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [3]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [10]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["LMC_initial * exp(growth_rate(T_truck) * t_truck/24)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["LMC_initial * exp(growth_rate(T_truck) * t_truck/24)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU/g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Conc. of L. monocytogenes in the cheese during distribution to retail via truck."]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["transport and storage", "truck"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rtriang(n = ITER1D, min = 6.4, mode = 6.4, max = 16.979, ", "    upper = 15.5, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["triang(min = 6.4, mode = 6.4, max = 16.979, upper = 15.5)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["°C"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["INMETRO (2006)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Temperature distribution during storage at retail. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["transport and storage", "retail"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["triang"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max", "upper"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [6.4]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [6.4]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [16.979]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [15.5]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rtriang(n = ITER1D, min = 1, mode = 7, max = 20, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["triang(min = 1, mode = 7, max = 20)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["days"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Rocha et al. (2006); Carvalho et al. (2007)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Storage time distribution at retail. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["transport and storage", "retail"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["triang"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [1]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [7]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [20]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["LMC_milk/cheese_yield"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["LMC_milk / cheese_yield"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU/g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Initial Conc. of L. monocytogenes in the cheese after cheese making"]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["initial contamination"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rnorm(n = ITER1D, mean = 6.7, sd = 1.6, lower = 3.6, upper = 10.9, ", "    type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["gaussian(mean = 6.7, sd = 1.6, lower = 3.6, upper = 10.9)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["°C"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Koutsoumanis et al. (2010)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Temperature distribution during sdistribution to retail via truck. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["transport and storage", "truck"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["gaussian"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean", "sd", "lower", "upper"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [6.7]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [1.6]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [3.6]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [10.9]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rnorm(n = ITER1D, mean = 3.7, sd = 2, lower = 0.2, upper = 10.2, ", "    type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["gaussian(mean = 3.7, sd = 2, lower = 0.2, upper = 10.2)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["hours"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Koutsoumanis et al. (2010)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Transport time distribution during distribution to retail via truck. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["transport and storage", "truck"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["gaussian"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean", "sd", "lower", "upper"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [3.7]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [2]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.2]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [10.2]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [10]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["10"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU/mL"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Assumption"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Conc. of L. monocytogenes in the milk tank"]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["initial contamination"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rnorm(n = ITER1D, mean = 0.152, sd = 0.011, lower = 0.141, ", "    upper = 0.167, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["gaussian(mean = 0.152, sd = 0.011, lower = 0.141, upper = 0.167)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["g/mL"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Neves-Souza and Silva (2006); Cardoso (2006)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Yield of amount of cheese in gram from one mL milk. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["initial contamination"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["gaussian"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean", "sd", "lower", "upper"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.152]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.011]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.141]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.167]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [1e-12]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["1e-12"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["1/CFU"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["FAO/WHO – Food and Agriculture Organization/World Health Organization (2004). Risk\nassessment of Listeria monocytogenes in ready-to-eat foods: Technical report.\nMicrobiological Risk Assessment Series, 5 http://www.fao.org/3/a-y5394e.pdf,\nAccessed date: 16 October 2017"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Frequency or prob. of illness by ingesting one CFU for vulnerable population.  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["dose-response"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["2.4 * 1e-14"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["2.4*1e-14"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["1/CFU"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["FAO/WHO – Food and Agriculture Organization/World Health Organization (2004). Risk\nassessment of Listeria monocytogenes in ready-to-eat foods: Technical report.\nMicrobiological Risk Assessment Series, 5 http://www.fao.org/3/a-y5394e.pdf,\nAccessed date: 16 October 2017"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Frequency or prob. of illness by ingesting one CFU for general population.   "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["dose-response"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["-expm1(-r_v * D_dist)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["-expm1(-r_v * D_dist)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Risk of infection with Listeria monocytogenes per meal for vulnerable population "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["dose-response"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["-expm1(-r_g * D_dist)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["-expm1(-r_g*D_dist)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Risk of infection with Listeria monocytogenes per meal for general population "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["dose-response"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["1DMC", "2DMC", "SEED", "QUANTILES", "QUANTILE_TYPE", "QUANTILES_2D"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [100000]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "ITER2D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1000]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [500]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [42]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.05, 0.25, 0.5, 0.75, 0.95]
+        },
+        {
+          "type": "integer",
+          "attributes": {},
+          "value": [8]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.05, 0.95]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["growth_rate"]
+        }
+      },
+      "value": [
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["function(Temp)\n{\n    T0 <- -2.765  # °C\n    b <- 0.068  # 1/(°C * sqrt(d))\n    ifelse(Temp > T0, b^2 * (Temp - T0)^2, 0)\n}"]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["growth_rate"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["unit", "source", "descr"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["1/d"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Ratkowsky et al., J. Bacteriol. 1982, 149(1), 1-5, https://doi.org/10.1128/jb.149.1.1-5.1982"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Bacterial growth rate depending on the temperature with the Ratkowsky model. Input is the temperature (in °C). Output is growth rate (in 1/day)."]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["Robert Opitz"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "email", "institution"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Robert Opitz"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["robert.opitz@bfr.bund.de"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["German federal institute for risk assessement (BfR)"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["# Introduction\n\nModel was derived from Campagnollo et al. Food Control, 92, 2018, 370-379, see also https://doi.org/10.1016/j.foodcont.2018.05.019"]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["*L. monocytogenes* in Minas chesse"]
+    }
+  ]
+}

@@ -1,0 +1,696 @@
+{
+  "type": "list",
+  "attributes": {
+    "names": {
+      "type": "character",
+      "attributes": {},
+      "value": ["file_version", "node_list", "param_list", "global_expr", "global_expr_info", "author_list", "model_descr", "model_name"]
+    }
+  },
+  "value": [
+    {
+      "type": "double",
+      "attributes": {},
+      "value": [2]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["dose_expectation", "Conc_init", "Liver_prop", "Serving_size", "exponent_dist", "exposition"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["Conc_init * (Liver_prop/100) * Serving_size"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Conc_init * (Liver_prop/100) * Serving_size"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["copies of HEV"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Expectation value of the dose of HEV-RNA copies per meal."]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["10^exponent_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["10^exponent_dist"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["copies/g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Initial HEV-RNA concentration in liver sausage in copies per gram."]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n = ITER1D, min = 10, mode = 30, max = 50, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["pert(min = 10, mode = 30, max = 50)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["%"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Amount of liver as ingredient in liver sausages in percent. "]
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["pert"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [10]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [30]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [50]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n = ITER1D, min = 25, mode = 30, max = 50, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["pert(min = 25, mode = 30, max = 50)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Ingested amount of liver sausage per meal in gram. "]
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["pert"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [25]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [30]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [50]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rcumulative(n = ITER1D, full_x = c(2, 3, 4, 5, 6, 7), full_p = c(0, ", "    0.35, 0.6, 0.9, 0.95, 1), type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["cumulative(full_x = c(2, 3, 4, 5, 6, 7), full_p = c(0, 0.35, 0.6, 0.9, 0.95, 1))"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Distribution of the exponent of the concentration HEV-RNA copies per gram. "]
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["cumulative"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["full_x", "full_p"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [2, 3, 4, 5, 6, 7]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0, 0.35, 0.6, 0.9, 0.95, 1]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "mc_dim", "dist_def"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rpois(n = ITER1D, lambda = dose_expectation, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["poisson(lambda = dose_expectation)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["copies of HEV"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["The ingested dose of HEV-RNA copies per meal.  "]
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["poisson"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["lambda"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["dose_expectation"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["1DMC", "2DMC", "SEED", "QUANTILES", "QUANTILE_TYPE"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [100000]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "ITER2D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1000]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [500]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [42]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.05, 0.25, 0.5, 0.75, 0.95]
+        },
+        {
+          "type": "integer",
+          "attributes": {},
+          "value": [8]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {},
+      "value": []
+    },
+    {
+      "type": "list",
+      "attributes": {},
+      "value": []
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["Robert Opitz", "Annett Martin"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Robert Opitz"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Federal Institute for Risk Assessment (BfR)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["robert.opitz@bfr.bund.de"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Annett Martin"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Federal Institute for Risk Assessment (BfR)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["annett.martin@bfr.bund.de"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["# Introduction\n\nThis model is a toy model for quantitave exposure modeling derived from 'Estimated exposure to hepatitis E virus through consumption of swine liver and liver sausages'; Sarno et al., Food Control, 73, 2017, see also https://doi.org/10.1016/j.foodcont.2016.09.030"]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["HEV in liver sausages"]
+    }
+  ]
+}

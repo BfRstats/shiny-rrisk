@@ -1,0 +1,1600 @@
+{
+  "type": "list",
+  "attributes": {
+    "names": {
+      "type": "character",
+      "attributes": {},
+      "value": ["file_version", "node_list", "param_list", "global_expr", "global_expr_info", "author_list", "model_descr", "model_name"]
+    }
+  },
+  "value": [
+    {
+      "type": "integer",
+      "attributes": {},
+      "value": [4]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["infestation_rate", "import_q", "spear_weight", "infested_spears", "percent_spears_in_suitable_areas", "p_discarded", "eff_spears", "p_adults_emerging_from_waste", "prop_female", "prop_finding_partner", "prob_founder_population_established", "mean_founder_populations", "Nb_mated_females", "Nb_emerged_adults", "Nb_spears_in_suitable_areas", "nb_spears", "nb_populations"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["lognormal(meanlog = -2.24, sdlog = 1.16)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["promyria"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Proportion of infested spears entering the EU.\n\nInfestation rate of Asparagus from Peru  Parameter for lognormal distribution were found by fitting quantiles ( 0.01, 0.05, 0.1, 0.25, 1.0 ) and cdf values ( 0.01, 0.25, 0.5, 0.75, 0.99 ).  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Import"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["lognormal"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["meanlog", "sdlog"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [-2.24]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [1.16]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rlnorm(n = ITER1D, meanlog = -2.24, sdlog = 1.16, type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["gaussian(mean = 21339712, sd = 2398003)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["kg"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Annual data for 2017 to 2022 are extracted from EUROSTAT, table: EU trade since 1988 by HS2-4-6 and CN8 [DS-045409] for exporter \"Peru\", product \"Fresh or chilled asparagus\", flow \"Impoort\", and reporter \"European Union - 27 countries (AT, BE, BG, CY, CZ, DE, DK, EE, ES, FI, FR, GR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK). Last update: 20/02.2022, download 23/02.2023."]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Import quantity of asparagus from Peru into the EU\n\nMany potential pathways for entry were considered and investigated. The pathway ‘fresh asparagus from Peru’ was the sole pathway quantitatively assessed given the evidence of interceptions from Peru and the dominance of Peru as the main exporter of asparagus.\n\nBased on EU imports of asparagus from Peru 2017–2022 the variability of mean annual import of fresh asparagus from Peru into EU (kg) was desc robed with a normal distribution  Normal (21,339,712, 2,398,003). The estimated annual median quantity of future asparagus imports into the EU is 21.3 million kg (90% CR is from 17.4 million to 25.3 million kg).\n\n**Uncertainties**: The Panel assumed that trade over the next 5 years would be similar to trade in the recent past (2018–2022). In reality, trade may increase or decrease quickly in response to markets and consumer preferences. This uncertainty was not accounted for but was considered small compared to that in other parameters.\n\n             "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Import"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["gaussian"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean", "sd"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [21339712]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [2398003]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rnorm(n = ITER1D, mean = 21339712, sd = 2398003, type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["0.0262"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["kg"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Average of European unit weights (EU mean) of \"asparagus\" reported in the EFSA Primo model to estimate the acute pesticide intake (RAC).  EFSA 2018. Guidance on use of EFSA Pesticide Residue Intake Model (EFSA PRIMo revision 3). EFSA Journal 2018;16(1):5147, 43 pp.  ModeL:www.efsa.europa.eu/sites/default/files/applications/EFSA_PRIMo_rev3.1.xlsm"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Weight of a single asparagus spear (to calculate the number of imported spears as the\nvolume of trade (kg) divided by the weight of a single spear).\n\nA constant (0.026 kg) was used as the mean weight of an asparagus spear (EFSA, 2018).\n\n**Uncertainties**: There is variation in weight of asparagus spears and uncertainty on the average, but willing to focus on more important uncertainties, the panel used a standard value from the EFSA PRIMo database (EFSA, 2018).    "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Import"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["0.0262"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["nb_spears*(infestation_rate/10000)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[spears]"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of infested spears entering the EU           "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Import"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["nb_spears * (infestation_rate/10000)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["16.4"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["%"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Proportion of infested spears imported to suitable NUTS2 regions [%] "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["suitable spears"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["16.4"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["10"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["%"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Proportion of discarded infested spears in percent. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["discarded spears"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["10"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Nb_spears_in_suitable_areas*(p_discarded/100)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[spears]"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of discarded infested spears in risk areas      "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["discarded spears"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Nb_spears_in_suitable_areas * (p_discarded/100)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n=ITER1D,min=0,mode=0.0107,max=7.23,shape=2.86,type=SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["pert(min = 0, mode = 0.0107, max = 7.23, shape = 2.86)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["%"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Proportion of adults emerging from waste in percent. Parameter for PERT distribution were found by fitting quantiles ( 0, 0, 0.5, 1.0, 2.5, 5 ) and cdf values ( 0, 0.01, 0.25, 0.5, 0.75, 0.99  ). These values were estimated using EFSA EKE."]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["emerged adult insects"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["pert"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max", "shape"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.0107]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [7.23]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [2.86]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["50"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["%"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Proportion of females in percent of total population "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["female insects"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["50"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n=ITER1D,min=0,mode=0.0627,max=0.27,type=SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["pert(min = 0, mode = 0.0627, max = 0.27)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["%"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Proportion of females finding mating partner in percent.    Parameter for PERT distribution were found by fitting quantiles ( 0, 0, 0.05, 0.08, 0.12, 0.20 ) and cdf values ( 0, 0.01, 0.25, 0.5, 0.75, 0.99 ). These values were estimated using EFSA EKE."]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["female insects"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["pert"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.0627]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.27]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n=ITER1D,min=0,mode=36.9,max=51,shape=1.03,type=SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["pert(min = 0, mode = 36.9, max = 51, shape = 1.03)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["%"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Probability of establishing a founder population in percent. Parameter for PERT distribution were found by fitting quantiles ( 0, 1, 20, 30, 40, 50 ) and cdf values ( 0, 0.01, 0.25, 0.5, 0.75, 0.99 ). These values were estimated using EFSA EKE."]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["founder populations"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["pert"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max", "shape"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [36.9]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [51]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [1.03]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Nb_mated_females*(prob_founder_population_established/100)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[founder]"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Average number of founder populations in risk areas         "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["founder populations"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Nb_mated_females * (prob_founder_population_established/100)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Nb_emerged_adults*(prop_finding_partner/100)*(prop_female/100)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[females]"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of mated females in risk areas         "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["female insects"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Nb_emerged_adults * (prop_finding_partner/100) * (prop_female/100)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["eff_spears*(p_adults_emerging_from_waste/100)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[adults]"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of emerged adults in risk areas       "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["emerged adult insects"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["eff_spears * (p_adults_emerging_from_waste/100)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["infested_spears*(percent_spears_in_suitable_areas/100)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[spears]"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of infested spears in suitable climate          "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["suitable spears"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["infested_spears * (percent_spears_in_suitable_areas/100)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["import_q/spear_weight"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[spears]"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Averaged number of asparagus spears imported from Peru        "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Import"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["import_q/spear_weight"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["poisson(lambda = mean_founder_populations)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[founder]"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of founder populations in risk area  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["founder populations"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["poisson"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["lambda"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean_founder_populations"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rpois(n = ITER1D, lambda = mean_founder_populations, type = SAMPLING_TYPE)"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["1DMC", "2DMC", "SEED", "QUANTILES", "QUANTILE_TYPE", "QUANTILES_2D"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [100000]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "ITER2D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [5000]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [500]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [42]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.05, 0.25, 0.5, 0.75, 0.95]
+        },
+        {
+          "type": "integer",
+          "attributes": {},
+          "value": [8]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.05, 0.95]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {},
+      "value": []
+    },
+    {
+      "type": "list",
+      "attributes": {},
+      "value": []
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["Robert Opitz", "Thomas Selhorst"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Robert Opitz"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Bundesinstitut für Risikobwertung (BfR)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["robert.opitz@bfr.bund.de"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Thomas Selhorst"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Bundesinstitut für Risikobewertung (BfR)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["thomas.selhorst@bfr.bund.de"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["Implementation of the Current Model from Supplementary material to the 'Pest risk assessment of Elasmopalpus lignosellus for the European Union' - Entry model. © 2023 Wiley-VCH Verlag GmbH & Co. KgaA on behalf of the European Food Safety Authority. https://doi.org/10.2903/j.efsa.2023.8004\n\n# Terms of Reference (ToR)\n\nEFSA is requested, pursuant to Article 29(1) of Regulation (EC) No 178/2002, to provide scientific opinions in the field of plant health.\n\nEFSA is requested to deliver 50 pest categorisations for the pests listed in Annex 1A, 1B and 1D. Additionally, EFSA is requested to perform pest categorisations for the pests so far not regulated in the EU, identified as pests potentially associated with a commodity in the commodity risk assessments of the HRP dossiers (Annex 1C). Such pest categorisations are needed in the case where there are not available risk assessments for the EU.\n\nWhen the pests of Annex 1A are qualifying as potential Union quarantine pests, EFSA should proceed to phase 2 risk assessment. The opinions should address entry pathways, spread, establishment, impact and include a risk reduction options analysis.\n\nAdditionally, EFSA is requested to develop further the quantitative methodology currently followed for risk assessment, in order to have the possibility to deliver an express risk assessment methodology. Such methodological development should take into account the EFSA Plant Health Panel Guidance on quantitative pest risk assessment and the experience obtained during its implementation for the Union candidate priority pests and for the likelihood of pest freedom at entry for the commodity risk assessment of High Risk Plants.\n\n## Interpretation of the Terms of Reference\nElasmopalpus lignosellus is one of the eight plant pest species listed in Annex 1A of the terms of reference. As such, following the pest categorisation of E. lignosellus which concluded that the species satisfies the EU criteria, which are within the remit of EFSA to assess, for it to be regarded as a potential Union quarantine pest (EFSA PLH Panel, 2021), EFSA should proceed to conduct phase two of the risk assessment. In phase two, entry pathways, spread, establishment and impact are to be evaluated. An analysis of risk reduction options is also required. It was noted that the quantitative method used for assessing pest risk should deliver an express risk assessment. This could be achieved by taking into account the methods used to (i) assess pest freedom when conducting risk assessments for pests associated with high-risk plant commodities (EFSA PLH Panel, 2019) (thus informing the likelihood of pest entry) and (ii) inform decision-making regarding candidate Union priority pests, in particular with regard to a pest's spread and impact (EFSA, 2019). The Panel therefore undertook a quantitative pest risk assessment according to the principles laid down in its guidance on quantitative pest risk assessment (EFSA PLH Panel, 2018) while recognising the need of the Commission for an express risk assessment.\n\nIn addition, after consideration of the availability of data necessary to conduct the assessment, the Panel conducted also an assessment to identify EU regions that could become suitable for establishment of E. lignosellus in future taking climate change scenarios into account.\n\n# Data and methodologies\nTo obtain a deeper understanding of the organism and to inform the necessary steps in the risk assessment, a literature review was conducted using the Web of Science databases. Findings built on the information collected for the pest categorisation (EFSA PLH Panel, 2021). The scientific and common names of the pest were used as search terms, and no filters (limits) for either time of publication nor language were implemented, and all Web of Science databases were selected. The following search string was used to retrieve results: ‘lesser cornstalk borer’ OR ‘kleiner Maisstengelbohrer’ OR ‘lagarta-do-colo-do-milho’ OR ‘Elasmopalpus’ OR ‘barrenador menor del maíz’ OR ‘lagarta’ OR ‘barrenador menor del tallo de maíz’ OR ‘gusano perforador del brote’ OR ‘taladrador menor’ OR ‘barrenador gusano saltarín’ OR ‘gusano saltarín’ OR ‘barrenador del cuello’ OR ‘coralillo’ OR ‘gusano picador de la hoja’ OR ‘pyrale du maïs et du riz’ OR ‘Elasmopalpus lignosellus’ OR ‘E.lignosellus’ OR ‘Dasypyga carbonella’ OR ‘Elasmopalpus anthracellus’ OR ‘Elasmopalpus carbonella’ OR ‘Elasmopalpus incautella’ OR ‘Elasmopalpus major’ OR ‘Elasmopalpus puer’ OR ‘Elasmopalpus tartarella’ OR ‘Pempelia lignosella’ OR ‘Salebria lignosella’ OR ‘sugarcane jumping borer’. The Web of Science search resulted in 2,894 hits. An additional search was conducted via the Google Scholar search engine to specifically find literature published in Spanish/Portuguese, with the following Spanish names inserted individually (with number of results in parentheses): barrenador del cuello (2,410 results), barrenador menor (10,100 results), lagarta –do –colo –do milho (2,030 results), gusano perforador del brote (955 results), taladrador menor (15,300 results), gusano saltarín (753 results), gusano picador de la hoja (1,290 results), coralillo (2,540 results). Both the Web of Science and the Google Scholar searches were conducted on 18 March 2022, numbers of results were recorded on 30 January 2023.\n\nAdditional searches, limited to retrieve documents, were run when developing the opinion. The available scientific information, including the previous EFSA pest categorisation (EFSA PLH Panel, 2021) and the relevant literature and legislation e.g. Regulation (EU) 2016/2031 and Commission Implementing Regulation (EU) 2019/2072, was taken into account.\n\nIn performing the risk assessment, the following assessment steps were distinguished:\n\n1. Estimating the number of E. lignosellus individuals that enter the EU,\n\n2. Identifying the areas where E. lignosellus can establish in the EU,\n\n3. Quantifying the number of E. lignosellus individuals entering NUTS2 areas of the EU where climatic conditions are suitable for establishment and transfer to a host in those areas, leading to the initiation of a founder population (**not included in this report!**),\n\n4. Estimating the duration of the lag period before a founder population begins to spread as well as the steady rate of spread,\n\n5. Estimating the potential loss in yield of cereal and legume crops in situations with and without specific pest management of E. lignosellus being used by farmers.\n\nJudgements made in each assessment step were based on a combination of literature review, meta-analysis, information collected during interviews with hearing experts and expert knowledge elicitation (EKE) involving Panel members and EFSA staff to assess quantities that could not be well identified from the literature or databases alone (EFSA, 2014). To link commodity entry volumes into the EU with the assessment of establishment, imported commodities were assumed to be distributed across the EU in proportion to human population.\n\nAccording to ISPM 5 (FAO, 2018a), entry is ‘movement of a pest into an area where it is not yet present, or present but not widely distributed and being officially controlled’ while establishment is ‘perpetuation, for the foreseeable future, of a pest within an area after entry’. Introduction, according to the same ISPM5, is ‘the entry of a pest resulting in its establishment’. In the assessment of entry, the Panel first identified pathways for entry of E. lignosellus into Europe, finding there is one main pathway, fresh asparagus from Peru. The volume of trade to the EU was estimated, as well as the proportion of infested asparagus (Section 2.1). A pathway model was developed. Attention was subsequently diverted from the pathway modelling of entry to mapping establishment to identify which areas are at risk of establishment following entry. Methods are described in Sections 2.2.1–2.2.5. After identification of the areas at risk using CLIMEX and Köppen–Geiger climate mapping, the pathway modelling was continued in Section 2.2.6. In this section, the entry flow is partitioned to parts of Europe suitable for establishment and not suitable for establishment. Transfer is modelled using a stochastic pathway model only for the areas with a risk of establishment, assuming that no populations of E. lignosellus will be founded in areas that are not suitable for its establishment. Section 2.2.7 presents the overall pathway model for introduction, encompassing both entry and establishment."]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["Pest risk assessment of *Elasmopalpus lignosellus* for the European Union"]
+    }
+  ]
+}

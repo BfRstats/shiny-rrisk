@@ -1,0 +1,2489 @@
+{
+  "type": "list",
+  "attributes": {
+    "names": {
+      "type": "character",
+      "attributes": {},
+      "value": ["file_version", "node_list", "param_list", "global_expr", "global_expr_info", "author_list", "model_descr", "model_name"]
+    }
+  },
+  "value": [
+    {
+      "type": "double",
+      "attributes": {},
+      "value": [3]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["N_rg", "mu_max_cg", "Time_cg", "Temp_cg", "N_mp", "mu_max_rg", "Time_rg", "Temp_rg", "N_mb", "W_mp", "W_b", "n_pbb", "N_bc", "R_bd", "n_bb", "P_initial", "proc_bellies", "W_bc", "N_ccg", "S_bc", "C_cci", "Time_ccg", "lambda_ccg", "D_ccg", "C_initial", "I_cc", "N_cg"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_yule_furry_process(n = ITER1D, N0 = N_mp, rate = mu_max_rg, ", "    time = Time_rg, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["yule_furry_process(N0 = N_mp, rate = mu_max_rg, time = Time_rg)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["David Vose, Risk Analysis: a quantitative guide, 3rd ed., John Wiley & Sons, 2008. The Yule-Furry process is described in the Chapter: Microbial food safety risk assessment, paragraph 21.1.2 Growth and attenuation models without memory"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of *Y. enterocolitica* in one package of minced meat after storage at retail simulated using the Yule-Furry process. The Yule-Furry process is the stochastic model for an exponential growth model.      "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Storage at retail"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["yule_furry_process"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["N0", "rate", "time"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["N_mp"]
+                    },
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mu_max_rg"]
+                    },
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["Time_rg"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["growth_rate_2(Temp_cg)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["growth_rate_2(Temp_cg)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["1/h"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[ComBase](https://www.combase.cc/)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Maximum growth rate (MAP) evaluated using a user-defined function of temperature and other parameters set to standard values (see Table User-defined functions).      "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Storage at consumer level"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n = ITER1D, min = 0, mode = 24, max = 96, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["pert(min = 0, mode = 24, max = 96)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["h (hours)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[Marklinder et al. (2004)](https://doi.org/10.4315/0362-028X-67.11.2570)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Time between purchase and consumption/preparation. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Storage at consumer level"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["pert"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [24]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [96]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n = ITER1D, min = 5, mode = 7, max = 9, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["pert(min = 5, mode = 7, max = 9)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["°C"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[Devriese et al. (2006)](https://scholar.google.com/scholar_lookup?title=De%20Belgische%20Voedselconsumptiepeiling%201-2004&author=S.%20Devriese&publication_year=2006)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Temperature of home refrigerators. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Storage at consumer level"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["pert"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [5]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [7]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [9]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rbinom(n = ITER1D, size = N_mb, prob = W_mp/W_b, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["binom(size = N_mb, prob = W_mp/W_b)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Assumption"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of Y. enterocolitica in one minced meat package after packaging/partitioning. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Partitioning/packaging"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["binom"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["size", "prob"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["N_mb"]
+                    },
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["W_mp/W_b"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["growth_rate_2(Temp_rg)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["growth_rate_2(Temp_rg)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["1/h"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[ComBase](https://www.combase.cc/)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Maximum growth rate (MAP) evaluated using a user-defined function of temperature and other parameters set to standard values (see Table User-defined functions).      "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Storage at retail"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [48]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["48"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["h (hour)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Assumption"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Time between packaging and selling at retail. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Storage at retail"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [4]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["4"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["°C"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Assumption"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Temperature during storage in meat processing plant and at retail. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Storage at retail"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["N_mb_func(n_pbb, N_bc, R_bd)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["N_mb_func(n_pbb, N_bc, R_bd)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Calculation"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of Y. enterocolitica in one minced meat batch. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Mixing and grounding"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [0.5]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["0.5"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["kg"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Company information"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Weight per minced meat package. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Partitioning/packaging"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [900]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["900"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["kg"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Company information"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Weight of a batch of minced meat. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Mixing and grounding"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rbinom(n = ITER1D, size = n_bb, prob = P_initial, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["binom(size = n_bb, prob = P_initial)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["none"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Calculation"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of positive bellies per batch. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Mixing and grounding"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["binom"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["size", "prob"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["n_bb"]
+                    },
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["P_initial"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["ceiling(N_ccg * S_bc)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["ceiling(N_ccg * S_bc)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU/belly"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Calculation"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of Y. enterocolitica per belly after cutting. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Cutting and derinding"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["50/100"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["50/100"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["none"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Assumption"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Proportion of *Y. enterocolitica* that remain on the belly cut after derinding.  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Mixing and grounding"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["proc_bellies * W_b/W_bc"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["proc_bellies * W_b / W_bc"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["none"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Calculation"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of bellies per batch. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Mixing and grounding"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["16.39/100"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["16.39/100"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["none"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["van Damme et al. (2015)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Prevalence of *Y. enterocolitica* on pig carcasses (sternal region) after evisceration.  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Mixing and grounding"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["34/100"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["34/100"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["none"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Company Information"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Proportion of bellies per batch (w:w).   "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Mixing and grounding"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [7.5]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["7.5"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["kg"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Company information"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Weight of a belly cut. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Mixing and grounding"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["10^(C_cci) * 2^((Time_ccg - lambda_ccg)/D_ccg)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["10^(C_cci) * 2^((Time_ccg - lambda_ccg)/D_ccg)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU/cm^2"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Calculation"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of *Y. enterocolitica* after growth during cold storage . "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Growth during carcass cold storage"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [2000]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["2000"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["source", "unit", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Assumption"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["cm^2"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Surface of belly cut."]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Cutting and derinding"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["C_initial + I_cc"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["C_initial + I_cc"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["log10(CFU)/cm^2"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Calculation"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Concentration on pig carcasses after inactivation during chilling. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Inactivation during carcass chilling"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rdiscrete(n = ITER1D, x = c(20, 68), prob = c(0.8, 0.2), ", "    type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["discrete(x = c(20, 68), prob = c(0.8, 0.2))"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["h (hour)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Company info"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Cold storage time of carcasses and all head meat and tonsils applied in the same batch. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Growth during carcass cold storage"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["discrete"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["x", "prob"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [20, 68]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.8, 0.2]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [24]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["24"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["h (hour)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["van Netten et al. (1997)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Lag phase during carcass cold storage. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Growth during carcass cold storage"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [9.978]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["9.978"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["h (hour)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["[ComBase](https://www.combase.cc/)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Doubling time during cold storage.   "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Growth during carcass cold storage"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_rnorm(n = ITER1D, mean = -2.565, sd = 0.736, lower = -1.85, ", "    type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["gaussian(mean = -2.565, sd = 0.736, lower = -1.85)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["log10(CFU)/cm^2"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["data from van Damme et al. (2015) https://doi.org/10.1016/j.ijfoodmicro.2015.03.016"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Initial contamination of carcasses\n\n- The concentration of *Y. enterocolitica* on pork carcasses was represented by a normal distribution in the model, with a mean of -2.565 and a standard deviation of 0.736, expressed in log base 10 colony-forming units per square centimeter (CFU/cm^2).\n\n- The initial contamination level (C initial) was determined based on various detection methods, and the distribution was adjusted to have a minimum value of 1.85 log 10 CFU/cm^2. This adjustment was necessary because it represented the limit of detection for the most sensitive detection method used.\n\n- By truncating the distribution at 1.85 log 10 CFU/cm^2, the model accounted for the fact that concentrations below this limit could not be accurately detected, ensuring a realistic representation of the contamination levels on the pork carcasses in the simulation. Concentration of *Y.  enterocolitica* on pig carcasses (sternal region) after evisceration (positive carcasses only).  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Inactivation during carcass chilling"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["gaussian"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean", "sd", "lower"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [-2.565]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.736]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [-1.85]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["-0.6"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["-0.6"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["log10(CFU)/cm^2"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["King et al. (2012)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Inactivation. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Inactivation during carcass chilling"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "language",
+              "attributes": {},
+              "value": ["rrisk_yule_furry_process(n = ITER1D, N0 = N_rg, rate = mu_max_cg, ", "    time = Time_cg, type = SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["yule_furry_process(N0 = N_rg, rate = mu_max_cg, time = Time_cg)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["David Vose, Risk Analysis: a quantitative guide, 3rd ed., John Wiley & Sons, 2008. The Yule-Furry process is described in the Chapter: Microbial food safety risk assessment, paragraph 21.1.2 Growth and attenuation models without memory"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of *Y. enterocolitica* in one package of minced meat at the end of storage (just before consumption or preparation) is the numerical outcome of this model and simulated using the Yule-Furry process. The Yule-Furry process is the stochastic model for an exponential growth model.\n\nA histogram and an empirical cumulative distribution function (ecdf) is shown below, followed by a plot of non-parametric correlation coefficients (Spearman’s rho) for other stochastic nodes (model inputs) as a sensitivity analysis.  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Storage at consumer level"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["yule_furry_process"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["N0", "rate", "time"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["N_rg"]
+                    },
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mu_max_cg"]
+                    },
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["Time_cg"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["1DMC", "2DMC", "SEED", "QUANTILES", "QUANTILE_TYPE", "QUANTILES_2D"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [100000]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "ITER2D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [5000]
+            },
+            {
+              "type": "double",
+              "attributes": {},
+              "value": [500]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [42]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.05, 0.25, 0.5, 0.75, 0.95]
+        },
+        {
+          "type": "integer",
+          "attributes": {},
+          "value": [8]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.05, 0.95]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["growth_rate_2", "growth_rate", "N_mb_func"]
+        }
+      },
+      "value": [
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["function(Temp)\n{\n    a <- 0.0242  # 1/h; growth rate at Temp = 0°C\n    Tref <- 7.092  # °C; if Temp = Tref, then growth_rate = a * exp(1)\n    a * exp(Temp/Tref)\n}"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["function(Temp)\n{\n    T0 <- -4.9636  # °C\n    b_sq <- 0.0004749  # 1/(h*°C^2)\n    ifelse(Temp > T0, b_sq * (Temp - T0)^2, 0)\n}"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Vectorize(\n    FUN = function(n_pbb, N_bc, R_bd)\n    {\n        sum(rbinom(n = n_pbb, size = N_bc, prob = R_bd))\n    },\n    vectorize.args = c(\"n_pbb\", \"N_bc\")\n)"]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["growth_rate_2", "growth_rate", "N_mb_func"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["unit", "source", "descr"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["1/h"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Own approach. Critic on Ratkowsky model."]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Ratkowsky et al. showed that the model for chemical reaction rate constant $k = A\\,\\exp(-E/RT)$ does not work for modeling the temperature dependence of bacterial growth rates. They found, by chance, an empirical model $\\sqrt{r}=b\\,(T-T_0)$. \n\nInterestingly, the model $r = a\\,\\exp(T/T_0)$ fits the data as well. If using the Taylor series, the Ratkowsky model should be a linearization of this model till the quadratic term: $r = a\\,\\exp(T/T_{0,\\,\\text{new}}) \\approx A\\,T^2 + B\\,T + C = b\\,(T-T_{0,\\,\\text{Ratkowsky}})$\n\nThe new approach is nice, as we do not need the ifelse statement. It tells also a different story: the bacteria would still grow at lower temperatures than zero, because the phase shift of water to ice is not included in the model. This is also the case for the Ratkowksy  model, it is there just obfuscated.\n\n Fitted to the ComBase data."]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["unit", "source", "descr"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["1/h"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Data from ComBase and fitted using Ratkowsky model, Ratkowsky et al., J. Bacteriol. 1982, 149(1), 1-5, https://doi.org/10.1128/jb.149.1.1-5.1982\n\nThe fitted values were extracted from van Damme et al., 2017, https://doi.org/10.1016/j.fm.2016.12.006"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Maximum growth rate (MAP) dependence on Temperature modeled with Ratkowksy square-root model. Input is temperature in °C."]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["unit", "source", "descr"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["none"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["van Damme et al. Paper, https://doi.org/10.1016/j.fm.2016.12.006"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["The function calculates the total number of pathogenic *Y. enterocolitica* in a batch of minced meat:\nThis function is designed to:\n\nGenerate n_pbb binomial random variables, where:\n\n- n_pbb represents the number of potentially contaminated pork bellies\n- N_bc is the number of Y. enterocolitica on a contaminated belly cut\n- R_bd is the probability of bacteria remaining after derinding\n\nSum up all these random variables\n\nThis process effectively simulates the total number of Y. enterocolitica bacteria that end up in the batch from all contaminated belly cuts, taking into account:\n\n- The number of contaminated bellies\n- The number of bacteria on each contaminated belly\n- The probability of bacteria remaining after processing\n\nThis function implements the sum $\\sum_{i=1}^{n_{pdd}}\\,N_{bdr,\\,i}$. We needed to simplify the original approach, with $N_{bdr} = \\text{Binomial}(N_{bc},\\,R_{bd})$. The sum() function at the end adds up all these contributions, giving the total number of Y. enterocolitica in the batch (Nmb).\n\nIn order to compute the sum for each value of $n_{pbb}$, and $N_{bc}$, we have to loop over the produced 1D-MC vector for $n_{pbb}$, and $N_{bc}$. We do this here implictly by wrapping the function of interest in the R-function *Vectorize*."]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["Robert Opitz", "Thomas Selhorst", "Mariia Galaburda"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Robert Opitz"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["German Federal Institute for Risk Assessment (BfR) "]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["robert.opitz@bfr.bund.de"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Thomas Selhorst"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["BfR"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["thomas.selhorst@gmail.com"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Mariia Galaburda"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["National University of Life and Environmental Sciences of Ukraine · Faculty of Veterinary Medicine"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["galaburda_ma@nubip.edu.ua"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["# Preamble \nThe model for *Yersinia (Y.) enterocolitica* in minced meat by [van Damme et al., 2017](https://doi.org/10.1016/j.fm.2016.12.006) serves as an illustration of quantitative microbial risk assessment (QMRA) models implemented in *shiny rrisk* in partial fulfilment of a work package of the FRAMEWORK PARTNERSHIP AGREEMENT (FPA)– GP/EFSA/AMU/2020/02 “Test of shiny rrisk in the context of EFSA risk assessment activities”. \n\n# Background \n“This study aimed to evaluate the effect of different processing scenarios along the farm-to-fork chain on the contamination of minced pork with human pathogenic *Y. enterocolitica*. A modular process risk model (MPRM) was used to perform the assessment of the concentrations of pathogenic *Y. enterocolitica* in minced meat produced in industrial meat processing plants. The model described the production of minced pork starting from the contamination of pig carcasses with pathogenic *Y. enterocolitica* just before chilling. The endpoints of the assessment were (i) the proportion of 0.5 kg minced meat packages that contained pathogenic *Y. enterocolitica* and (ii) the proportion of 0.5 kg minced meat packages that contained more than 10³ pathogenic *Y. enterocolitica* at the end of storage, just before consumption of raw pork or preparation. Comparing alternative scenarios to the baseline model showed that the initial contamination and different decontamination procedures of carcasses have an important effect on the proportion of highly contaminated minced meat packages at the end of storage. The addition of pork cheeks and minimal quantities of tonsillar tissue into minced meat also had a large effect on the endpoint estimate. Finally, storage time and temperature at consumer level strongly influenced the number of highly contaminated packages.” (cited from [van Damme et al., 2017](https://doi.org/10.1016/j.fm.2016.12.006)).\n\n# Objectives\nThe objectives of the model are\n\n- to evaluate how different processing methods affect the contamination of minced pork with *Y. enterocolitica*,\n- to highlight the importance of controlling contamination at the slaughterhouse level including the choice of tissues for production of minced meat and \n- to evaluate how the way consumers store and handle minced pork, such as the time and temperature of storage, affects the number of highly contaminated packages.\n\n#  Scope\nThe model considers initial contamination, decontamination procedures at the slaughterhouse as well as different processing scenarios along the farm-to-fork chain to understand the contamination levels of minced pork with human pathogenic *Y. enterocolitica*. Due to a lack of a health risk estimates, the model uses point estimates of the prevalence (proportion of 0.5-kg packages containing one or more pathogenic *Y. enterocolitica*) and/or the proportion of highly contaminated minced meat packages (containing > 103 pathogenic *Y. enterocolitica* per 0.5-kg package) as outcome.\n\n# Model description \n## Approach\nThis is a modular process risk model ([Nauta, 2001](https://www.rivm.nl/bibliotheek/rapporten/149106007.pdf)) originally developed to simulate different scenarios and for showing that initial contamination and decontamination procedures at the slaughterhouse have a significant impact on contamination levels in minced pork. An overview of the model and a detailed description of the input parameters used are shown in the *Model Table* below. To evaluate the effect of alternative scenarios, the value of one or more model parameters was changed and the corresponding endpoint estimate was compared to that of the baseline scenario. Different scenarios were compared by calculating the log 10 of the relative proportions (the quotient of the endpoint estimate of an alternative scenario and the endpoint estimate of the baseline scenario), as e.g. in [Møller et al., 2015](https://doi.org/10.1016/j.ijfoodmicro.2014.10.010). The parameters of the model (nodes) are organized in parts (node groups) to reflect the modular structure.  \n\n## Baseline model\nThe model uses data from a Belgian study to determine the presence and amount of pathogenic Yersinia enterocolitica on pig carcasses. The study found that 16.4% of the carcasses were contaminated with *Y. enterocolitica* bioserotype 4/O:3 on the sternal region. Different methods were used to analyze samples from the sternal region to determine the concentration of pathogenic *Y. enterocolitica*. A statistical tool called the R package \"fitdistrplus\" was used to fit a normal distribution to the concentration data. The resulting normal distribution represented the concentration of *Y. enterocolitica* on pork carcasses, with a mean of -2.565 log10 CFU/cm2 and a standard deviation of 0.736.\nThe distribution was truncated at a minimum value of 1.85 log10 CFU/cm2, which was the limit of detection of the most sensitive detection method used.\nThe final truncated distribution had a mean concentration of 1.46 log10 CFU/cm2 and a standard deviation of 0.33.\n\n## Inactivation and growth during carcass chilling and cold storage\nBlast chilling involves freezing the carcass surface, leading to a 0.6 log10 reduction in pathogenic *Y. enterocolitica* concentrations, as per [King et al. (2012)]( doi.org/10.4315/0362-028x.jfp-12-004). If the concentration after inactivation during blast chilling is below 1 CFU/2000 cm^2, the carcass is considered free of pathogenic *Y. enterocolitica*, and no growth is allowed in the model. Following blast chilling, *Y. enterocolitica* is assumed to grow during conventional air chilling and cold storage at 4°C. The growth model during carcass cold storage has a doubling time (Dccg) of 10.0 hours, based on ComBase Predictor data using specific input values. The lag phase (lccg) for growth is set at 24 hours, and the maximum allowed concentration is 7 log10 CFU/cm^2. Carcasses from pigs slaughtered on different days have varying cold storage times (Time ccg) before processing. The concentration of pathogenic *Y. enterocolitica* on carcasses after growth during cold storage (Nccg) is determined based on these parameters and assumptions.\n\n## Model notation\nIn the original  model,\n$N_{ccg}=2^{\\frac{\\frac{Tmmccc}{N_{cci}}-L_{ccg}}{D_{cg}}}$\n\n$N_{ccg}$ represents the number of pathogenic *Y. enterocolitica* cells in minced meat packages at the end of storage, $N_{cci}$ is the initial number of pathogenic *Y. enterocolitica* cells on pig carcasses before processing, $Tmmccc$ denotes the total number of pathogenic *Y. enterocolitica* cells on pig carcasses, $L_{ccg}$ signifies the limit of pathogenic *Y. enterocolitica* cells considered safe in minced meat packages and $D_{cg}$ is the decontamination factor for carcasses during processing.\n\nThe formula calculates the number of pathogenic *Y. enterocolitica* cells in minced meat packages based on the initial contamination level on pig carcasses, decontamination factor, and safe limit for consumption. The right-hand-side of the formula adjusts the number of pathogenic *Y. enterocolitica* cells based on the contamination level on pig carcasses and the decontamination efficiency during processing. \nThe equation helps in assessing the risk of contamination of minced pork with pathogenic *Y. enterocolitica* along the farm-to-fork chain, considering different processing scenarios and interventions. The higher the initial contamination, the lower the efficacy of decontamination, the lower the reduction during processing, or the higher the dilution factor, the higher the concentration of pathogenic *Y. enterocolitica* in the minced meat after processing. This formula helps in understanding how different processing scenarios and interventions can affect the contamination level of minced pork with human pathogenic *Y. enterocolitica*, providing valuable insights for risk assessment and control measures in meat processing plants.\n\n"]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["*Yersinia enterocolitica* in minced meat"]
+    }
+  ]
+}

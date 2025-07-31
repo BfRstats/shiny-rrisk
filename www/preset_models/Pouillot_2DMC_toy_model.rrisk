@@ -1,0 +1,1752 @@
+{
+  "type": "list",
+  "attributes": {
+    "names": {
+      "type": "character",
+      "attributes": {},
+      "value": ["file_version", "node_list", "param_list", "global_expr", "global_expr_info", "author_list", "model_descr", "model_name"]
+    }
+  },
+  "value": [
+    {
+      "type": "integer",
+      "attributes": {},
+      "value": [4]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["r", "R_rare", "R_medium", "R_well_done", "log10_C0", "mean_log10_C0", "sd_log10_C0", "serving_size", "dose", "concentration", "initial_concentration", "reduction_factor", "risk", "bs_shape_uncert", "bs_scale_uncert", "serving_bs_generator"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["pert(min = 1e-04, mode = 0.0012, max = 0.01)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["1/CFU"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["The mode was determined by Delignette-Muller and Cornu, Int. J. of. Food Micro, 128, 2008"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["frequency of infection by ingestion of one CFU  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["dose-response"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [2]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["pert"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "mode", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.0001]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.0012]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.01]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n = 1, min = 1e-04, mode = 0.0012, max = 0.01,type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["unif(min = 0.126, max = 1)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Reduction factor for cooking preference 'rare'. After cooking 100 % to 12.6 % of the bacteria survive. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["cooking"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unif"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.126]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [1]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_runif(n = ITER1D, min = 0.126, max = 1, type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["unif(min = 0.04, max = 0.631)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Reduction factor for cooking preference 'medium'. After cooking 63.1 % to 4 % of the bacteria survive. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["cooking"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unif"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.04]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.631]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_runif(n = ITER1D, min = 0.04, max = 0.631, type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["unif(min = 0.002, max = 0.063)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Reduction factor for cooking preference 'well-done'. After cooking 6.3 % to 0.2 % of the bacteria survive. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["cooking"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unif"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["min", "max"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.002]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.063]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_runif(n = ITER1D, min = 0.002, max = 0.063, type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["gaussian(mean = mean_log10_C0, sd = sd_log10_C0)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["log10(CFU/g)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Distribution of the initial concnetration based on 18 fictious counts of E. coli O157:H7. This is assumed to be log-normal distributed. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["frozen_patties"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["gaussian"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean", "sd"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean_log10_C0"]
+                    },
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["sd_log10_C0"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rnorm(n = ITER1D, mean = mean_log10_C0, sd = sd_log10_C0,type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["gaussian(mean = 0.232, sd = 0.323)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["log10(CFU/g)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Distribution of the mean for 18 fictious counts of E. coli O157:H7   "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["frozen_patties"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [2]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["gaussian"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["mean", "sd"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.232]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [0.323]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rnorm(n = ITER2D, mean = 0.232, sd = 0.323, type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["sigma_dist(sd = 1.346, nn = 18)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["log10(CFU/g)"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Distribution of the standard deviation for 18 fictious counts of E. coli O157:H7  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["frozen_patties"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [2]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["sigma_dist"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["sd", "nn"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [1.346]
+                    },
+                    {
+                      "type": "double",
+                      "attributes": {},
+                      "value": [18]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rsigma_dist(n = ITER2D, sd = 1.346, nn = 18, type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["weibull(shape = bs_shape_uncert, scale = bs_scale_uncert)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Delignette-Muller and Cornu, Int. J. of. Food Micro, 128, 2008"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["serving size in gramm   "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["serving"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["weibull"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["shape", "scale"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["bs_shape_uncert"]
+                    },
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["bs_scale_uncert"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rweibull(n = ITER1D, shape = bs_shape_uncert, scale = bs_scale_uncert,type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["poisson(lambda = serving_size * concentration)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Number of ingested bacteria per serving.    "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["dose-response"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["poisson"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["lambda"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["serving_size * concentration"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rpois(n = ITER1D, lambda = serving_size * concentration,type = SAMPLING_TYPE)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["initial_concentration * reduction_factor"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU/g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["bacterial conc. in CFU per gramm of E. coli O157:H7 in the patty   "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["cooking"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["initial_concentration * reduction_factor"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["10^log10_C0"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["CFU/g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["initial conc. in CFU per gramm of E. coli O157:H7 in the frozen patties. "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["frozen_patties"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["10^log10_C0"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rdiscrete(n=ITER1D,x=cbind(R_rare, R_medium, R_well_done),prob=c(14,59,71)/144,type=SAMPLING_TYPE)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["discrete(x = cbind(R_rare, R_medium, R_well_done), prob = c(14,59,71)/144)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Reduction factor of the initial bacterial concentration in dependence of the cooking preference  "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["cooking"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["name", "def"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["discrete"]
+                },
+                {
+                  "type": "list",
+                  "attributes": {
+                    "names": {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["x", "prob"]
+                    }
+                  },
+                  "value": [
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["R_rare", "R_medium", "R_well_done"]
+                    },
+                    {
+                      "type": "character",
+                      "attributes": {},
+                      "value": ["c(14,59,71)/144"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["user_defined"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["-expm1(-r*dose)"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["none"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["not mentioned"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["This model describes a so-called single hit model. The model used by Pouillot is risk = 1-(1-r)^D, but it can be simplified for small r to risk = 1 - exp(-r*D). The used R-function expm1(x) = exp(x) - 1 is better for x close to zero. -expm1(x) = 1 - exp(x). "]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["dose-response"]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["-expm1(-r * dose)"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["bootstrap_result"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["serving_bs_generator[['bs_shape_uncert']]"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["serving_bs_generator[['bs_shape_uncert']]"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["This node contains the value for the shape parameter for the Weibull distribution."]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["serving"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [2]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["bootstrap_result"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["serving_bs_generator[['bs_scale_uncert']]"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["serving_bs_generator[['bs_scale_uncert']]"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": [""]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["This node contains the value for the scale parameter for the Weibull distribtuion."]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["serving"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [2]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "NULL"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["type", "code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["bootstrap"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["do_bootstrapping(n = ITER2D, input = serving_bs_generator,func_list = list(fit_to_weibull = fit_to_weibull))"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["bootstrap_generator()"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["unit", "source", "descr"]
+                }
+              },
+              "value": [
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["g"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Delignette-Muller, M.L., Cornu, M., 2008. Quantitative risk assessment for Escherichia\ncoli O157:H7 in frozen ground beef patties consumed by young children in French\nhouseholds. International Journal of Food Microbiology 128, 158–164."]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Serving size of ground beef consumed by Children less than 5 years of age. The data set as a size of n=254.\n\nHere, we model the uncertainty for the parameters shape and scale for the Weibull distribution used to model the data. The Weibull distribution was choosen by Delignette-Muller et al.."]
+                }
+              ]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["serving"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [2]
+            },
+            {
+              "type": "NULL"
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["data", "sum_stats"]
+                }
+              },
+              "value": [
+                {
+                  "type": "double",
+                  "attributes": {},
+                  "value": [30, 10, 20, 24, 20, 24, 40, 20, 50, 30, 26, 44, 25, 20, 40, 100, 30, 80, 50, 40, 20, 50, 50, 50, 50, 80, 80, 20, 60, 50, 50, 50, 50, 60, 50, 50, 50, 50, 17, 120, 80, 100, 80, 100, 50, 70, 50, 50, 50, 30, 90, 125, 50, 25, 50, 75, 100, 60, 100, 11.5, 100, 100, 50, 40, 50, 50, 50, 150, 50, 80, 100, 100, 80, 20, 30, 100, 70, 100, 80, 80, 50, 50, 50, 70, 25, 40, 100, 25, 130, 100, 60, 60, 100, 50, 50, 50, 50, 50, 50, 100, 30, 50, 50, 50, 100, 50, 50, 75, 25, 20, 75, 50, 50, 100, 100, 80, 130, 200, 40, 64, 40, 80, 80, 79, 80, 105, 51, 130, 105, 105, 80, 80, 40, 40, 50, 105, 105, 80, 105, 40, 50, 130, 105, 80, 40, 80, 50, 100, 200, 79, 150, 80, 80, 80, 80, 80, 65, 130, 40, 80, 80, 80, 130, 51, 130, 80, 80, 130, 51, 25, 79, 80, 50, 51, 50, 105, 80, 80, 130, 130, 80, 51, 50, 130, 115, 115, 200, 160, 105, 80, 80, 80, 130, 130, 80, 51, 50, 130, 105, 105, 80, 105, 80, 60, 51, 105, 80, 51, 40, 130, 130, 40, 32, 80, 25, 80, 80, 80, 40, 130, 130, 40, 75, 40, 80, 80, 150, 52.5, 130, 80, 80, 75, 40, 25.5, 51, 50, 80, 51, 130, 130, 51, 130, 80, 130, 80, 130, 130, 25.5, 117, 130, 80, 80, 80, 80]
+                },
+                {
+                  "type": "list",
+                  "attributes": {},
+                  "value": [
+                    {
+                      "type": "list",
+                      "attributes": {
+                        "names": {
+                          "type": "character",
+                          "attributes": {},
+                          "value": ["func_name", "result_vars"]
+                        }
+                      },
+                      "value": [
+                        {
+                          "type": "character",
+                          "attributes": {
+                            "names": {
+                              "type": "character",
+                              "attributes": {},
+                              "value": ["bs_shape_uncert, bs_scale_uncert.bs_shape_uncert, bs_scale_uncert.bs_shape_uncert, bs_scale_uncert.bs_shape_uncert, bs_scale_uncert"]
+                            }
+                          },
+                          "value": ["fit_to_weibull"]
+                        },
+                        {
+                          "type": "character",
+                          "attributes": {},
+                          "value": ["bs_shape_uncert", "bs_scale_uncert"]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["1DMC", "2DMC", "SEED", "QUANTILES", "QUANTILES_2D", "QUANTILE_TYPE"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [10000]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["MC"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["ITER1D", "ITER2D", "SAMPLING_TYPE"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [5000]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [500]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["LHS"]
+            }
+          ]
+        },
+        {
+          "type": "integer",
+          "attributes": {},
+          "value": [42]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.05, 0.25, 0.5, 0.75, 0.95]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.05, 0.25, 0.75, 0.95]
+        },
+        {
+          "type": "integer",
+          "attributes": {},
+          "value": [8]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["fit_to_weibull"]
+        }
+      },
+      "value": [
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["function(bs)\n{\n    # log-likihood fitting as a risk function\n    fit_routine <- function(par, x)\n    {\n        # compute risk\n        p <- dweibull(x, shape = par[\"shape\"], scale = par[\"scale\"])\n        mean(-log(p))\n    }\n\n    # fit weibull to data\n    fit <- optim(\n        par    = c(shape = 1, scale = mean(bs)), \n        fn     = fit_routine, \n        gr     = NULL,\n        bs, \n        method = \"L-BFGS-B\", \n        lower  = c(shape = 1e-06, scale = 0)\n    )\n\n    # return results as named list\n    # return values are matched to values of bootstrap result vars\n    list(bs_scale_uncert = fit$par[\"scale\"], \n         bs_shape_uncert = fit$par[\"shape\"])\n}"]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["fit_to_weibull"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["unit", "source", "descr"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["g"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": [""]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Fits a weibull distribution to provided input data."]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["Dr. Robert Opitz", "Prof. Dr. Thomas Selhorst"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Dr. Robert Opitz"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Federal Institute for Risk Assessment (BfR)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["robert.opitz@bfr.bund.de"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["name", "institution", "email"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Prof. Dr. Thomas Selhorst"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Federal Institute for Risk Assessment (BfR)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["thomas.selhorst@bfr.bund.de"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["# Introduction\n\nThis model was derived from the Toy 2D MC model from Pouillot et al., Int. J. of F. Micro, 142, 2010, https://doi.org/10.1016/j.ijfoodmicro.2010.07.011\n\nThe Pouillot et al. derived this model from Delignette-Muller, M.L., Cornu, M., 2008. Quantitative risk assessment for Escherichia coli O157:H7 in frozen ground beef patties consumed by young children in French households. International Journal of Food Microbiology 128, 158–164. https://doi.org/10.1016/j.ijfoodmicro.2008.05.040\n\nThis model investigates the risk for young children (less than 5 years old) in France of getting hemolytic and uremic syndrome following the consumption of ground beef patties (Steak Haché) accidentally contaminated with *E. coli* O157:H7."]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["*E. coli* in beef patties"]
+    }
+  ]
+}
