@@ -74,7 +74,7 @@ nodes_server <- function(input, output, session,
                                  param_dist_choices)
       # disable selection wheel for bootstrap result nodes
       shinyjs::toggleState(
-        id = "node_type",
+        id        = "node_type",
         condition = result$node_content$node_type != "bootstrap_result"
       )
     }
@@ -171,7 +171,7 @@ nodes_server <- function(input, output, session,
         )
         
         # get MC dim, aka variability (1 MC-Dim), or Uncertainty (2 MC-Dim)
-        mc_dim <- if (input$btn_rrisk_dist_var_uncert == "Variability") 
+        mc_dim <- if (input$btn_var_uncert == "Variability") 
                     1L 
                   else 
                     2L
@@ -224,22 +224,51 @@ nodes_server <- function(input, output, session,
   # for plotting the pdf of a parametric distribution in the
   # ADD/CHANGE NODE dialog
   output$pdf_plot <- renderPlot({
-    dist_name <- input$param_dist_name
-    param_names <- names(parametric_dists[[dist_name]])
-    params <- mapply(
-      FUN = function(param_name, i, this_dist) 
-      {
-        param <- input[[paste0("mc_input_", i)]]
-        if (isTRUE(parametric_dists[[this_dist]][[param_name]]$is_vector)) {
-          param <- cast_csv_as_vector(param)
-        }
-        try_cast_as_numeric(param)
-      },
-      param_names, seq_along(param_names),
-      MoreArgs = list(this_dist = dist_name),
-      SIMPLIFY = FALSE
-    )
-    plot_pdf(input$param_dist_name, params)
+    if (input$node_type == "param_dist") {
+      # pdf plot param dist
+      dist_name <- input$param_dist_name
+      param_names <- names(parametric_dists[[dist_name]])
+      params <- mapply(
+        FUN = function(param_name, i, this_dist) 
+        {
+          param <- input[[paste0("mc_input_", i)]]
+          if (isTRUE(parametric_dists[[this_dist]][[param_name]]$is_vector)) {
+            param <- cast_csv_as_vector(param)
+          }
+          try_cast_as_numeric(param)
+        },
+        param_names, seq_along(param_names),
+        MoreArgs = list(this_dist = dist_name),
+        SIMPLIFY = FALSE
+      )
+      plot_pdf(input$param_dist_name, params, 
+               xlab = paste0(input$node_name, " [", input$unit_name, "]"))
+    } else if (input$node_type == "rrisk_dist_import") {
+      # plot pdf for fiited distribution
+      if (is.null(rrisk_dist_fit())) return(NULL)
+      # get name and params of fitted dist
+      param_dist_name <- rrisk_dist_fit()$selected_fit$fitted_dist_name
+      params <- as.list(rrisk_dist_fit()$selected_fit$par)
+      # extend fitted params with missing params
+      this_dist <- parametric_dists[[param_dist_name]]
+      missing_params <- sapply(
+        X        = this_dist[!(names(this_dist) %in% names(params))],
+        FUN      = function(x) x$init,
+        simplify = FALSE
+      )
+      params <- c(params, missing_params)
+      # plot histogram
+      hist(
+        x    = rrisk_dist_fit()$provided_data, 
+        freq = FALSE,
+        main = "",
+        xlab = paste0(input$node_name, " [", input$unit_name, "]")
+      )
+      # plot fitted data
+      result <- get_pdf_data_for_plotting(param_dist_name,
+                                          params)
+      lines(result$x, result$y, col = "red", lwd = 2, type = result$type)
+    }
   })
   #---END: node modal dialog----------------------------------------------------
   
@@ -303,58 +332,32 @@ nodes_server <- function(input, output, session,
   observeEvent(
     eventExpr   = input$open_rrisk_dist_export_file,
     handlerExpr = {
+      
       infile <- input$open_rrisk_dist_export_file
       if (is.null(infile)) return(NULL)
+      
       # get rrisk_dist_fit
+      #result <- read_rrisk_dist_export_file(infile)
       model_path <- file(infile$datapath, "r")
       result <- tryCatch(jsonlite::unserializeJSON(readLines(model_path)),
                          error = function(e) "no-json")
       close(model_path)
-      # check if reading file was successful
-      #code here
+      
+      # check if reading file was succesful
       # if succesful add rrisk_dist_fit to reactive Value
       rrisk_dist_fit(result)
+
+      # Insert UI elements based on the rrisk dist fit
+      insertUI(
+        selector = "#rrisk_dist_import_ui_elements",
+        where    = "beforeEnd",
+        ui       = htmltools::div(
+          id = "testtest",
+          set_fitted_dist_input_ui(result, var_uncert = 1)
+        )
+      )
     } 
   )
-  
-  output$original_dist_fit_values <- renderText({
-    paste0(rrisk_dist_fit()$provided_data, collapse = ", ")
-  })
-  
-  output$display_text_rrisk_dist_fit <- renderText({
-    fit <- rrisk_dist_fit()$selected_fit
-    paste(
-      fit$fitted_dist_name,
-      paste(names(fit$par), fit$par, sep = " = ", collapse = "\n"),
-      sep = "\n"
-    )
-  })
-  
-  output$plot_rrisk_dist_fit <- renderPlot({
-    if (is.null(rrisk_dist_fit())) return(NULL)
-    # get name and params of fitted dist
-    param_dist_name <- rrisk_dist_fit()$selected_fit$fitted_dist_name
-    params <- as.list(rrisk_dist_fit()$selected_fit$par)
-    # extend fitted params with missing params
-    this_dist <- parametric_dists[[param_dist_name]]
-    missing_params <- sapply(
-      X        = this_dist[!(names(this_dist) %in% names(params))],
-      FUN      = function(x) x$init,
-      simplify = FALSE
-    )
-    params <- c(params, missing_params)
-    # plot histogram
-    hist(
-      x    = rrisk_dist_fit()$provided_data, 
-      freq = FALSE,
-      main = "",
-      xlab = paste0(input$node_name, " [", input$unit_name, "]")
-    )
-    # plot fitted data
-    result <- get_pdf_data_for_plotting(param_dist_name,
-                                        params)
-    lines(result$x, result$y, col = "red", lwd = 2, type = result$type)
-  })
   #---END: handle rrisk-dist-export file----------------------------------------
 
   # check if model is ok

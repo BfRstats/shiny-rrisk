@@ -1,4 +1,4 @@
-plot_pdf <- function(dist_name, params) 
+plot_pdf <- function(dist_name, params, xlab = "x") 
 {
   df_plot <- get_pdf_data_for_plotting(dist_name, params)
   if (is.null(df_plot$x)) {
@@ -6,7 +6,7 @@ plot_pdf <- function(dist_name, params)
          y    = NULL, 
          xlim = c(0,1), 
          ylim = c(0,1),
-         xlab = "x", 
+         xlab = xlab, 
          ylab = "pdf"
     )
     text(x = 0.5, y = 0.5, labels = "can not plot pdf")
@@ -14,7 +14,7 @@ plot_pdf <- function(dist_name, params)
     plot(x    = df_plot$x, 
          y    = df_plot$y, 
          type = df_plot$type, 
-         xlab = "x", 
+         xlab = xlab, 
          ylab = "pdf",
          ylim = c(0, max(df_plot$y))
     )

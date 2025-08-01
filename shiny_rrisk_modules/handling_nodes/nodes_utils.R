@@ -119,10 +119,6 @@ add_inputs_to_modal_dialog <- function(node_type = "",
   #removeUI(selector = "div#efsa_eke_ui_elements")
   removeUI(selector = "div#rrisk_dist_import_ui_elements")
   
-  if (node_type == "param_dist" &&
-      !is.null(item$info$rrisk_dist_fit))
-    node_type <- "rrisk_dist_import"
-  
   # insert ui elements for 
   # (a) user defined code, or 
   # (b) parametric distribution
@@ -198,25 +194,16 @@ add_inputs_to_modal_dialog <- function(node_type = "",
       ui       = htmltools::div(
         id = "rrisk_dist_import_ui_elements",
         htmltools::hr(),
-        # select if bootstrap node represents variable or
-        # uncertain variables
-        radioButtons(inputId  = "btn_rrisk_dist_var_uncert",
-                     label    = "Distribution represents:",
-                     choices  = c("Variability", "Uncertainty"),
-                     #selected = selected_item,
-                     inline   = TRUE),
         # open csv with data
         fileInput(inputId  = "open_rrisk_dist_export_file",
                   label    = "open rrisk-distributions-export file",
                   multiple = FALSE,
                   accept   = c("application/json",
                                ".rriskdistex")),
-        # visualization and modifing of data
-        verbatimTextOutput(outputId = "original_dist_fit_values"),
-        # verbatim Text output for fitted values
-        verbatimTextOutput(outputId = "display_text_rrisk_dist_fit"),
-        # plot area
-        plotOutput(outputId = "plot_rrisk_dist_fit")
+        # if the rrisk_dist_object already exist, then show UI elements
+        if (!is.null(item$info$rrisk_dist_fit)) {
+          set_fitted_dist_input_ui(item$info$rrisk_dist_fit, var_uncert = 1) 
+        }
       )
     )
     
@@ -235,7 +222,8 @@ add_inputs_for_mc_modal_dialog <- function(dist_params,
     ui       = htmltools::div(
       id = "parametric_dist_inputs",
       htmltools::hr(),
-      get_parametric_dist_input_ui(dist_params, var_uncert)))
+      get_parametric_dist_input_ui(dist_params, var_uncert))
+  )
 }
 
 get_parametric_dist_input_ui <- function(dist_params, 
@@ -272,6 +260,61 @@ get_parametric_dist_input_ui <- function(dist_params,
     column(
       width = 6,
       plotOutput(outputId = "pdf_plot")
+    )
+  )
+}
+
+set_fitted_dist_input_ui <- function(rrisk_dist_fit, 
+                                     var_uncert = 1) 
+{
+  selected_item <- if (var_uncert == 1) "Variability" else "Uncertainty"
+  
+  fluidPage(
+    fluidRow(
+      if (rrisk_dist_fit$data_type == "pdf") {
+        shinyjs::disabled(
+          textAreaInput(
+            inputId = "rrisk_dist_fit_pdf",
+            label   = "user provided data",
+            value   = paste(rrisk_dist_fit$provided_data, collapse = ", "),
+            width   = "100%"
+          )
+        )
+      } else if (rrisk_dist_fit$data_type == "cdf") {
+        
+      },
+      htmltools::hr()
+    ),
+    fluidRow(
+      column(
+        width = 5,
+        #htmltools::tags$strong(rrisk_dist_fit$selected_fit$fitted_dist_name),
+        htmltools::HTML(paste0("Fitted distribution: <b>",
+                               rrisk_dist_fit$selected_fit$fitted_dist_name,
+                               "</b><br><br>")),
+        radioButtons(inputId  = "btn_var_uncert",
+                     label    = "Distribution represents:",
+                     choices  = c("Variability", "Uncertainty"),
+                     selected = selected_item,
+                     inline   = TRUE),
+        
+        mapply(
+          function(i, label_name, this_value) {
+            shinyjs::disabled(
+              textInput(inputId = paste0("mc_input_", i),
+                        label   = label_name,
+                        value   = toString(this_value))
+            )
+          },
+          seq_along(rrisk_dist_fit$selected_fit$par), 
+          names(rrisk_dist_fit$selected_fit$par), rrisk_dist_fit$selected_fit$par,
+          SIMPLIFY = FALSE
+        )
+      ),
+      column(
+        width = 6,
+        plotOutput(outputId = "pdf_plot")
+      )
     )
   )
 }

@@ -356,19 +356,6 @@ rrisk_dtriang <- function(x, min, mode, max, lower = min, upper = max)
 }
 #---END: triangular-------------------------------------------------------------
 
-# rrisk_rcumulative <- function(n, full_x, full_p, type = "MC") {
-#   vapply(X   = rrisk_runif(n, type = type),
-#          FUN = function(this_p, full_x, full_p) {
-#            i <- which(full_p < this_p)
-#            i <- i[length(i)]
-#            m <- ((full_p[i+1] - full_p[i])/(full_x[i+1] - full_x[i]))
-#            (this_p - full_p[i]) / m + full_x[i]
-#          },
-#          FUN.VALUE = numeric(1),
-#          full_x, full_p,
-#          USE.NAMES = FALSE)
-# }
-
 # it is faster without vapply
 rrisk_rcumulative <- function(n, full_x, full_p, 
                               smooth = FALSE, type = "MC") 
@@ -430,9 +417,6 @@ rrisk_dcumulative <- function(x, full_x, full_p, smooth = FALSE)
 }
 
 #---BEGIN: general--------------------------------------------------------------
-# expand x and p
-# full_x <- c(min, x, max)
-# full_p <- c(0, rel_p, 0)
 # it is faster without vapply
 rrisk_rgeneral <- function(n, full_x, full_p, type = "MC") 
 {
@@ -481,44 +465,6 @@ rrisk_dgeneral <- function(full_x, full_p)
   # re-norm full_p
   full_p / A
 }
-# rrisk_rgeneral <- function(n, full_x, full_p, type = "MC") 
-# {
-#   # expand x and p
-#   #full_x <- c(min, x, max)
-#   #full_p <- c(0, rel_p, 0)
-#   # compute Area of pdf for each segement
-#   A_i <- vapply(X         = seq_len(length(full_x)-1),
-#                 FUN       = function(i, x, p) 
-#                               0.5 * (x[i+1] - x[i]) * (p[i+1] + p[i]),
-#                 FUN.VALUE = numeric(1),
-#                 full_x, full_p,
-#                 USE.NAMES = FALSE)
-#   # full area
-#   A <- sum(A_i)
-#   # renorm p
-#   full_p <- full_p / A
-#   # renorm A_i
-#   A_i <- A_i / A
-#   # get cumulative sum, with first element is zero
-#   cumsum_A_i <- c(0, cumsum(A_i))
-#   # set the function for computing random values from the general dist
-#   qgeneral <- function(this_p, x, p, F_x) {
-#     i <- which(this_p >= F_x)
-#     i <- i[length(i)]
-#     m <- (p[i+1] - p[i])/(x[i+1] - x[i])
-#     if (m == 0)
-#       dx <- (this_p - F_x[i]) / p[i]
-#     else
-#       dx <- (sqrt(p[i]^2 + 2 * m * (this_p - F_x[i])) - p[i]) / m
-#     x[i] + dx
-#   }
-#   # get random values from general distribution
-#   vapply(X         = rrisk_runif(n, type = type), 
-#          FUN       = qgeneral,
-#          FUN.VALUE = numeric(1),
-#          full_x, full_p, cumsum_A_i,
-#          USE.NAMES = FALSE)
-# }
 #---END: general----------------------------------------------------------------
 
 #---BEGIN: sigma----------------------------------------------------------------
