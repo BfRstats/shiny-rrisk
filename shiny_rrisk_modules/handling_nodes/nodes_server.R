@@ -1,5 +1,5 @@
 nodes_server <- function(input, output, session,
-                         rrisk_model, param_dist_choices, parametric_dists)
+                         rrisk_model, param_dist_choices, parametric_dists, param_dist_info)
 {
   item                <- reactiveValues()
   replace_node        <- FALSE #reactiveVal()
@@ -225,9 +225,15 @@ nodes_server <- function(input, output, session,
   # ADD/CHANGE NODE dialog
   output$pdf_plot <- renderPlot({
     if (input$node_type == "param_dist") {
+      
       # pdf plot param dist
+      # get dist name
       dist_name <- input$param_dist_name
+      # in case there is no dist name, return without doing a thing
+      if (is.null(dist_name)) return()
+      # get param names
       param_names <- names(parametric_dists[[dist_name]])
+      # try to get values for each param name
       params <- mapply(
         FUN = function(param_name, i, this_dist) 
         {
@@ -241,33 +247,59 @@ nodes_server <- function(input, output, session,
         MoreArgs = list(this_dist = dist_name),
         SIMPLIFY = FALSE
       )
+      # now plot
       plot_pdf(input$param_dist_name, params, 
                xlab = paste0(input$node_name, " [", input$unit_name, "]"))
+      
     } else if (input$node_type == "rrisk_dist_import") {
-      # plot pdf for fiited distribution
+      
+      # plot pdf for fitted distribution
       if (is.null(rrisk_dist_fit())) return(NULL)
+      
+      # plot histogram
+      if (rrisk_dist_fit()$data_type == "pdf") {
+        # plot histogram for pdf
+        hist(
+          x    = rrisk_dist_fit()$provided_data, 
+          freq = FALSE,
+          main = "",
+          xlab = paste0(input$node_name, " [", input$unit_name, "]")
+        )
+      } else if (rrisk_dist_fit()$data_type == "cdf") {
+        # plot histogram for cdf
+        diff_x <- diff(rrisk_dist_fit()$provided_data)
+        diff_y <- diff(rrisk_dist_fit()$provided_data_cdf)
+        slope <- diff_y / diff_x
+        
+        is_finite <- is.finite(slope)
+        slope <- slope[is_finite]
+        diff_x <- diff_x[is_finite]
+        
+        plot(x    = NULL, 
+             y    = NULL, 
+             xlim = range(rrisk_dist_fit()$provided_data), 
+             ylim = c(0, 1.1 * max(slope)),
+             xlab = "x",
+             ylab = "Density")
+        
+        n <- length(rrisk_dist_fit()$provided_data)-1
+        x <- rrisk_dist_fit()$provided_data[1:n]
+        x <- x[is_finite]
+        rect(xleft   = x,
+             ybottom = rep(0, length(diff_x)),
+             xright  = x + diff_x,
+             ytop    = slope,
+             col     = "gray")
+      }
+      
       # get name and params of fitted dist
       param_dist_name <- rrisk_dist_fit()$selected_fit$fitted_dist_name
       params <- as.list(rrisk_dist_fit()$selected_fit$par)
-      # extend fitted params with missing params
-      this_dist <- parametric_dists[[param_dist_name]]
-      missing_params <- sapply(
-        X        = this_dist[!(names(this_dist) %in% names(params))],
-        FUN      = function(x) x$init,
-        simplify = FALSE
-      )
-      params <- c(params, missing_params)
-      # plot histogram
-      hist(
-        x    = rrisk_dist_fit()$provided_data, 
-        freq = FALSE,
-        main = "",
-        xlab = paste0(input$node_name, " [", input$unit_name, "]")
-      )
       # plot fitted data
       result <- get_pdf_data_for_plotting(param_dist_name,
                                           params)
       lines(result$x, result$y, col = "red", lwd = 2, type = result$type)
+      
     }
   })
   #---END: node modal dialog----------------------------------------------------
@@ -337,25 +369,24 @@ nodes_server <- function(input, output, session,
       if (is.null(infile)) return(NULL)
       
       # get rrisk_dist_fit
-      #result <- read_rrisk_dist_export_file(infile)
-      model_path <- file(infile$datapath, "r")
-      result <- tryCatch(jsonlite::unserializeJSON(readLines(model_path)),
-                         error = function(e) "no-json")
-      close(model_path)
+      result <- read_rrisk_dist_export_file(infile, param_dist_info)
       
-      # check if reading file was succesful
-      # if succesful add rrisk_dist_fit to reactive Value
-      rrisk_dist_fit(result)
-
-      # Insert UI elements based on the rrisk dist fit
-      insertUI(
-        selector = "#rrisk_dist_import_ui_elements",
-        where    = "beforeEnd",
-        ui       = htmltools::div(
-          id = "testtest",
-          set_fitted_dist_input_ui(result, var_uncert = 1)
+      if (result$is_ok) {
+        
+        # if successful add rrisk_dist_fit to reactive Value
+        rrisk_dist_fit(result$fit_dist)
+        # add UI elements for displaying rrisk-dist results
+        add_inputs_for_rrisk_dist_import(result$fit_dist, var_uncert = 1)
+      
+      } else {
+        
+        myShinyAlert(
+          title = "Could not open file",
+          text  = result$error_message,
+          type  = "error"
         )
-      )
+        
+      }
     } 
   )
   #---END: handle rrisk-dist-export file----------------------------------------

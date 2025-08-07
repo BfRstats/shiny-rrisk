@@ -118,6 +118,7 @@ add_inputs_to_modal_dialog <- function(node_type = "",
   removeUI(selector = "div#bootstrap_ui_elements")
   #removeUI(selector = "div#efsa_eke_ui_elements")
   removeUI(selector = "div#rrisk_dist_import_ui_elements")
+  removeUI(selector = "div#rrisk_dist_import_elements")
   
   # insert ui elements for 
   # (a) user defined code, or 
@@ -188,6 +189,13 @@ add_inputs_to_modal_dialog <- function(node_type = "",
     
   } else if (node_type == "rrisk_dist_import") {
     
+    # tmp <- if (!is.null(item$info$rrisk_dist_fit)) {
+    #   add_inputs_for_rrisk_dist_import(item$info$rrisk_dist_fit, 
+    #                                    var_uncert = 1) 
+    # } else ""
+    # 
+    # print(tmp)
+    
     insertUI(
       selector = "#main_add_change_ui_element",
       where    = "afterEnd",
@@ -200,12 +208,15 @@ add_inputs_to_modal_dialog <- function(node_type = "",
                   multiple = FALSE,
                   accept   = c("application/json",
                                ".rriskdistex")),
-        # if the rrisk_dist_object already exist, then show UI elements
-        if (!is.null(item$info$rrisk_dist_fit)) {
-          set_fitted_dist_input_ui(item$info$rrisk_dist_fit, var_uncert = 1) 
-        }
       )
     )
+    
+    # If the rrisk_dist_object exist, then add UI elements here.
+    # Otherwise they will be added in node_server.R file
+    if (!is.null(item$info$rrisk_dist_fit)) {
+      add_inputs_for_rrisk_dist_import(item$info$rrisk_dist_fit, 
+                                       var_uncert = 1) 
+    }
     
   }
 }
@@ -264,6 +275,22 @@ get_parametric_dist_input_ui <- function(dist_params,
   )
 }
 
+add_inputs_for_rrisk_dist_import <- function(rrisk_dist_fit, 
+                                             var_uncert = 1)
+{
+  # remove previous mc param dist ui element
+  removeUI(selector = "div#rrisk_dist_import_elements")
+  # insert mc param dist ui element
+  insertUI(
+    selector = "#rrisk_dist_import_ui_elements",
+    where    = "beforeEnd",
+    ui       = htmltools::div(
+      id = "rrisk_dist_import_elements",
+      htmltools::hr(),
+      set_fitted_dist_input_ui(rrisk_dist_fit, var_uncert))
+  )
+}
+
 set_fitted_dist_input_ui <- function(rrisk_dist_fit, 
                                      var_uncert = 1) 
 {
@@ -281,7 +308,24 @@ set_fitted_dist_input_ui <- function(rrisk_dist_fit,
           )
         )
       } else if (rrisk_dist_fit$data_type == "cdf") {
-        
+        fluidPage(
+          shinyjs::disabled(
+            textAreaInput(
+              inputId = "rrisk_dist_fit_cdf_x",
+              label   = "user provided quantiles",
+              value   = paste(rrisk_dist_fit$provided_data, collapse = ", "),
+              width   = "100%"
+            )
+          ),
+          shinyjs::disabled(
+            textAreaInput(
+              inputId = "rrisk_dist_fit_cdf_y",
+              label   = "user provided probs",
+              value   = paste(rrisk_dist_fit$provided_data_cdf, collapse = ", "),
+              width   = "100%"
+            )
+          )
+        )
       },
       htmltools::hr()
     ),
@@ -290,7 +334,7 @@ set_fitted_dist_input_ui <- function(rrisk_dist_fit,
         width = 5,
         #htmltools::tags$strong(rrisk_dist_fit$selected_fit$fitted_dist_name),
         htmltools::HTML(paste0("Fitted distribution: <b>",
-                               rrisk_dist_fit$selected_fit$fitted_dist_name,
+                               rrisk_dist_fit$selected_fit$fitted_display_dist_name,
                                "</b><br><br>")),
         radioButtons(inputId  = "btn_var_uncert",
                      label    = "Distribution represents:",
