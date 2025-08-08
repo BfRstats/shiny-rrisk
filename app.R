@@ -10,7 +10,7 @@ library(shiny)
 #flextable
 #R6
 
-shiny_rrisk_version <- "alpha v18.3"
+shiny_rrisk_version <- "alpha v18.4"
 
 source("rrisk/rriskModelClass.R", chdir = TRUE)
 source("rrisk/rrisk_distributions/rrisk_distributions_plot_pdf.R")

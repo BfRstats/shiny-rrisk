@@ -165,6 +165,7 @@ nodes_server <- function(input, output, session,
         
       } else if (input$node_type == "rrisk_dist_import") {
         
+        # build list for parametric distribution
         param_dist_def <- list(
           name = rrisk_dist_fit()$selected_fit$fitted_dist_name,
           def  = rrisk_dist_fit()$selected_fit$par
@@ -255,6 +256,13 @@ nodes_server <- function(input, output, session,
       
       # plot pdf for fitted distribution
       if (is.null(rrisk_dist_fit())) return(NULL)
+      
+      # # get name and params of fitted dist
+      # param_dist_name <- rrisk_dist_fit()$selected_fit$fitted_dist_name
+      # params <- as.list(rrisk_dist_fit()$selected_fit$par)
+      # # plot fitted data
+      # result <- get_pdf_data_for_plotting(param_dist_name,
+      #                                     params)
       
       # plot histogram
       if (rrisk_dist_fit()$data_type == "pdf") {
@@ -377,6 +385,27 @@ nodes_server <- function(input, output, session,
         rrisk_dist_fit(result$fit_dist)
         # add UI elements for displaying rrisk-dist results
         add_inputs_for_rrisk_dist_import(result$fit_dist, var_uncert = 1)
+        
+        # update unit
+        updateTextInput(
+          session = session,
+          inputId = "unit_name",
+          value   = result$fit_dist$info_list$unit
+        )
+        
+        # update source
+        updateTextAreaInput(
+          session = session,
+          inputId = "source_descr",
+          value   = result$fit_dist$info_list$source
+        )
+        
+        # update description
+        updateTextAreaInput(
+          session = session,
+          inputId = "node_description",
+          value   = result$fit_dist$info_list$description
+        )
       
       } else {
         

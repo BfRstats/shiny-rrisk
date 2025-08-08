@@ -16,9 +16,9 @@ rriskModelClass$set("public", "save_model",
       file_path <- paste0(file_path, ".rrisk")
     
     model_representation <- list(
-      file_version      = 4L,
-      #file_version      = 5L,
-      #file_type        = "shiny-rrisk",
+      #file_version      = 4L,
+      file_version      = 5L,
+      file_type         = "shiny-rrisk",
       node_list         = private$node_list,
       param_list        = private$param_list,
       global_expr       = private$global_expr_display,

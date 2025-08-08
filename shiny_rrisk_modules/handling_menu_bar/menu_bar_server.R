@@ -59,6 +59,7 @@ menu_bar_server <- function(input, output, session, rrisk_model, temp_dir)
     {
       rrisk_model()$set_model_name(model_name)
       rrisk_model()$set_model_description(input$text_model_description)
+      print(file)
       rrisk_model()$save_model(file, silent = TRUE)
     },
     contentType = "application/json"
