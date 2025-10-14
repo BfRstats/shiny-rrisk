@@ -1,8 +1,6 @@
 # SERVER
 menu_bar_server <- function(input, output, session, rrisk_model, temp_dir)
 {
-  model_name <- ""
-  
   # menu reactivity
   observeEvent(
     eventExpr = input$menu_bar,
@@ -21,7 +19,7 @@ menu_bar_server <- function(input, output, session, rrisk_model, temp_dir)
       open_preset_model(rrisk_model, preset_model)
       
       if (input$menu_bar == "NEW") {
-        new_model_dialog(rrisk_model)
+        new_model_dialog(rrisk_model)#, session)
       } else if (input$menu_bar == "DISCLAIMER") {
         show_disclaimer_manual_and_contact_dialog()
       }
@@ -42,24 +40,16 @@ menu_bar_server <- function(input, output, session, rrisk_model, temp_dir)
     }
   )
   
-  observeEvent(
-    eventExpr   = input$text_model_name,
-    handlerExpr = {
-      model_name <<- input$text_model_name
-    }
-  )
-  
   # save model by downloading it
   output$download_model <- downloadHandler(
     filename = function()
     {
-      get_proper_file_name(model_name, "rrisk")
+      get_proper_file_name(input$text_model_name, "rrisk")
     }, 
     content  = function(file) 
     {
-      rrisk_model()$set_model_name(model_name)
+      rrisk_model()$set_model_name(input$text_model_name)
       rrisk_model()$set_model_description(input$text_model_description)
-      print(file)
       rrisk_model()$save_model(file, silent = TRUE)
     },
     contentType = "application/json"
@@ -69,7 +59,7 @@ menu_bar_server <- function(input, output, session, rrisk_model, temp_dir)
   output$download_report <- downloadHandler(
     filename = function()
     {
-      get_proper_file_name(model_name, "docx")
+      get_proper_file_name(input$text_model_name, "docx")
     }, 
     content  = function(report_file_path) 
     {
@@ -94,7 +84,7 @@ menu_bar_server <- function(input, output, session, rrisk_model, temp_dir)
          return()
        }
       }
-      rrisk_model()$set_model_name(model_name)
+      rrisk_model()$set_model_name(input$text_model_name)
       rrisk_model()$set_model_description(input$text_model_description)
       result <- rrisk_model()$compile_report(
         report_file_path,
@@ -125,7 +115,7 @@ menu_bar_server <- function(input, output, session, rrisk_model, temp_dir)
   output$download_results <- downloadHandler(
     filename = function()
     {
-      get_proper_file_name(model_name, "zip")
+      get_proper_file_name(input$text_model_name, "zip")
     }, 
     content  = function(file) 
     {

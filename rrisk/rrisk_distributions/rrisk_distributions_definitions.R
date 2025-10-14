@@ -413,10 +413,57 @@ get_param_dist_def <- function() {
                            max = "upper"),
       function_call = "rrisk_rweibull"
     ),
+    # gumbel
+    gumbel = list(
+      display_name = "gumbel",
+      type         = "continuous",
+      def          = list(
+        mu   = list(
+          init     = 0,
+          range    = list(min = "-Inf",
+                          max = "Inf"),
+          optional = FALSE
+        ),
+        beta = list(
+          init        = 1,
+          range       = list(min = "0",
+                             max = "Inf"),
+          check_rules = c("beta > 0"),
+          optional    = FALSE
+        )
+      ),
+      output_range = list(min = "-Inf",
+                          max = "Inf"),
+      function_call = "rrisk_rgumbel"
+    ),
+    # gompertz
+    gompertz = list(
+      display_name  = "gompertz",
+      type          = "continuous",
+      def           = list(
+        location = list(
+          init        = 1,
+          range       = list(min = "0",
+                             max = "Inf"),
+          check_rules = c("location > 0"),
+          optional    = FALSE
+        ),
+        shape = list(
+          init        = 1,
+          range       = list(min = "0",
+                             max = "Inf"),
+          check_rules = c("shape > 0"),
+          optional    = FALSE
+        )
+      ),
+      output_range  = list(min = "0",
+                           max = "Inf"),
+      function_call = "rrisk_rgompertz"
+    ),
     # gamma
     gamma    = list(
       display_name = "gamma",
-      type = "continuous",
+      type         = "continuous",
       def = list(
         shape = list(
           init        = 1,

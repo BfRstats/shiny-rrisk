@@ -116,6 +116,57 @@ rrisk_dweibull <- function(x, shape, scale = 1, lower = 0, upper = Inf)
 }
 #---END: weibull----------------------------------------------------------------
 
+#---BEGIN: Gumbel distribution--------------------------------------------------
+rrisk_qgumbel <- function(p, mu = 0, beta = 1)
+{
+  mu - beta * log(-log(p))
+}
+
+rrisk_rgumbel <- function(n, mu = 0, beta = 1, type = "MC")
+{
+  p <- rrisk_runif(n, type = type)
+  rrisk_qgumbel(p = p, mu = mu, beta = beta)
+}
+
+rrisk_dgumbel <- function(x, mu = 0, beta = 1)
+{
+  z <- -(x - mu) / beta
+  (1/beta) * exp(z - exp(z))
+}
+
+rrisk_pgumbel <- function(q, mu = 0, beta = 1)
+{
+  exp(-exp(-(q - mu)/beta))
+}
+#---END: Gumbel distribution----------------------------------------------------
+
+#---BEGIN: Gompertz distribution------------------------------------------------
+rrisk_qgompertz <- function(p, location = 1, shape = 1)
+{
+  (1/shape) * log(1 - (shape/location) * log(1 - p))
+}
+
+rrisk_rgompertz <- function(n, location = 1, shape = 1, type = "MC")
+{
+  p <- rrisk_runif(n, type = type)
+  rrisk_qgompertz(p = p, location = location, shape = shape)
+}
+
+rrisk_dgompertz <- function(x, location = 1, shape = 1)
+{
+  ifelse(x > 0,
+         location * exp(shape * x - (location/shape)*(exp(shape * x) - 1)),
+         0)
+}
+
+rrisk_pgompertz <- function(q, location = 1, shape = 1)
+{
+  ifelse(q > 0,
+         1 - exp(-(location/shape)*(exp(shape * q) - 1)),
+         0)
+}
+#---END: Gompertz distribution--------------------------------------------------
+
 #---BEGIN: normal/gaussian distribution-----------------------------------------
 rrisk_rnorm <- function(n, mean, sd, lower = -Inf, upper = Inf,
                         type = "MC") 
@@ -353,6 +404,27 @@ rrisk_dtriang <- function(x, min, mode, max, lower = min, upper = max)
                        yes  = 2 * (x - min) / diff_bb,
                        no   = 2 * (max - x) / diff_c) / (p_max - p_min),
          no   = 0)
+}
+
+rrisk_ptriang <- function(q, min, mode, max)
+{
+  vapply(
+    X   = q,
+    FUN = function(xx, min, mode, max)
+    {
+      if (xx <= min)
+        0
+      else if (xx > min && xx <= mode)
+        (xx - min)^2 / ((max - min)*(mode - min))
+      else if (xx > mode && xx < max)
+        1 - (max - xx)^2 / ((max - min)*(max - mode))
+      else
+        1
+    },
+    FUN.VALUE = numeric(1),
+    min, mode, max,
+    USE.NAMES = FALSE
+  )
 }
 #---END: triangular-------------------------------------------------------------
 

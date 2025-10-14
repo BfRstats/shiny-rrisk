@@ -345,6 +345,42 @@ get_pdf_data_for_plotting <- function(dist_name, params)
                             upper = upper)
       }
     },
+    "gumbel" = {
+      mu   <- params[["mu"]]
+      beta <- params[["beta"]]
+      
+      if (is.numeric(mu) &&
+          is.numeric(beta) &&
+          beta > 0) {
+        
+        x <- seq(from       = rrisk_qgumbel(0.001, mu, beta),
+                 to         = rrisk_qgumbel(0.999, mu, beta),
+                 length.out = 201)
+        y <- rrisk_dgumbel(x    = x,
+                           mu   = mu,
+                           beta = beta)
+        
+      }
+      
+    },
+    "gompertz" = {
+      location <- params[["location"]]
+      shape <- params[["shape"]]
+      
+      if (is.numeric(location) &&
+          is.numeric(shape) &&
+          location > 0 &&
+          shape > 0) {
+        
+        x <- seq(from       = rrisk_qgompertz(0.001, location = location, shape = shape),
+                 to         = rrisk_qgompertz(0.999, location = location, shape = shape),
+                 length.out = 201)
+        y <- rrisk_dgompertz(x        = x,
+                             location = location,
+                             shape    = shape)
+        
+      }
+    },
     "triang" = {
       min_value <- params[["min"]]
       mode_value <- params[["mode"]]
@@ -397,8 +433,8 @@ get_pdf_data_for_plotting <- function(dist_name, params)
           is.numeric(rate) &&
           is.numeric(lower) &&
           is.numeric(upper) &&
-          shape >= 0 &&
-          rate >= 0 &&
+          shape > 0 &&
+          rate > 0 &&
           lower >= 0 &&
           lower < upper) {
         
