@@ -12,8 +12,8 @@ get_proper_file_name <- function(file_name, file_ext)
     file_name <- paste0(file_name, ".", file_ext)
     # return proper file name
   } else {
-    # no file_name given; set dfeault file_name
-    file_name <- paste0("shiny_rrisk_model.", file_ext)
+    # no file_name given; set default file_name
+    file_name <- paste0("shiny-rrisk-dist_model.", file_ext)
   }
   file_name
 }
