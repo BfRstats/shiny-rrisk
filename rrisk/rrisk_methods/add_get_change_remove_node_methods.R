@@ -315,16 +315,19 @@ rriskModelClass$set("public",
   "get_df_nodes", function(get_pretty_code = TRUE, info_elements = NULL)
   {
     
-    # or just return the whole node_list ?
+    if (missing(info_elements) || is.null(info_elements)) {
+      info_elements <- NULL
+      for (node in private$node_list) {
+        info_elements <- c(info_elements, names(node$info))
+      }
+      info_elements <- unique(info_elements)
+    }
     
-    # create bare bone data frame for nodes
-    df_nodes <- data.frame(node_name   = character(),
-                           node_group  = character(),
-                           node_code   = character(),
-                           node_unit   = character(),
-                           node_mc_dim = character(),
-                           node_descr  = character(),
-                           node_type   = character())
+    col_names <- c("node_name", "node_group", "node_code", "node_mc_dim", 
+                   "node_type", info_elements)
+    df_nodes <- data.frame(matrix(ncol = length(col_names),
+                                  nrow = 0))
+    colnames(df_nodes) <- col_names
 
     # fill node data frame
     for (node_name in names(private$node_list)) {
@@ -349,32 +352,36 @@ rriskModelClass$set("public",
       else
         node_mc_dim <- if (node$mc_dim == 1L) "V" else "U"
       
-      # get infos about node
-      info <- sapply(
-       X   = info_elements,
-       FUN = function(info_element)
-       {
-         this_info <- node$info[[info_element]]
-         if (is.null(this_info) ||
-             !nzchar(trimws(this_info)))
-           "--"
-         else
-           trimws(this_info)
-       },
-       simplify = FALSE
+      this_df_node <- data.frame(
+        node_name   = node_name,
+        node_group  = node_group,
+        node_code   = node_expr,
+        node_mc_dim = node_mc_dim,
+        node_type   = node$type
       )
       
-      # add row with information of this node to node data frame
-      df_nodes <- rbind.data.frame(
-        df_nodes,
-        data.frame(node_name   = node_name,
-                   node_group  = node_group,
-                   node_code   = node_expr,
-                   node_mc_dim = node_mc_dim,
-                   node_type   = node$type,
-                   list2DF(info))
+      # get infos about node
+      if (!is.null(info_elements)) {
+        info <- sapply(
+          X   = info_elements,
+          FUN = function(info_element)
+          {
+            this_info <- node$info[[info_element]]
+            if (is.null(this_info) ||
+                !nzchar(trimws(this_info)))
+              "--"
+            else
+              trimws(this_info)
+          },
+          simplify = FALSE
         )
+        this_df_node <- cbind.data.frame(this_df_node, list2DF(info))
+      }
+ 
+      # add row with information of this node to node data frame
+      df_nodes <- rbind.data.frame(df_nodes, this_df_node)
     }
+    
 
     df_nodes
   }
