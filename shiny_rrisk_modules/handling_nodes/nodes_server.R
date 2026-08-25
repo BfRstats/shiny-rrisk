@@ -1,5 +1,6 @@
 nodes_server <- function(input, output, session,
-                         rrisk_model, param_dist_choices, parametric_dists, param_dist_info)
+                         rrisk_model, param_dist_choices, parametric_dists, 
+                         param_dist_info)
 {
   item                <- reactiveValues()
   replace_node        <- FALSE #reactiveVal()
@@ -72,6 +73,11 @@ nodes_server <- function(input, output, session,
       add_inputs_to_modal_dialog(result$node_content$node_type,
                                  result$node_content,
                                  param_dist_choices)
+      # disable 'delete node' button for implicit nodes
+      shinyjs::toggleState(
+        id        = "btn_delete_item",
+        condition = result$node_content$node_type != "implicit"
+      )
       # disable selection wheel for bootstrap result nodes
       shinyjs::toggleState(
         id        = "node_type",
@@ -316,7 +322,8 @@ nodes_server <- function(input, output, session,
   observeEvent(
     eventExpr   = input$btn_delete_item,
     handlerExpr = {
-      item_num <- parseActionButton(input$btn_delete_item)
+      print(input$node_name)
+      # item_num <- parseActionButton(input$btn_delete_item)
       myShinyAlert(
         title             = "Delete item?",
         text              = "Do you want to delete item?",
@@ -326,7 +333,8 @@ nodes_server <- function(input, output, session,
         animation         = FALSE,
         callbackR         = function(value) {
           if (isTRUE(value)) {
-            rrisk_model()$remove_node(node_num = item_num)
+            rrisk_model()$remove_node(node_name = input$node_name)
+            removeModal()
           }
         })
     }

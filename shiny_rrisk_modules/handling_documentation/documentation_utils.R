@@ -22,9 +22,23 @@ add_change_author_dialog <- function(author = list(name        = "",
     textInput(inputId = "email_text",
               label   = "E-Mail",
               value   = author$email),
-    footer = tagList(modalButton("Cancel"),
-                     actionButton(inputId = "btn_add_change_author",
-                                  label   = add_change_btn_text))
+    footer = tagList(
+      fluidRow(
+        column(
+          width = 1,
+          if (!is_add_dialog)
+            actionButton(inputId = "btn_delete_author",
+                         label   = "Delete Author")
+        ),
+        column(
+          width = 5,
+          modalButton("Cancel"),
+          actionButton(inputId = "btn_add_change_author",
+                       label   = add_change_btn_text),
+          offset = 6
+        )
+      )
+    )
   )
 }
 
@@ -50,12 +64,13 @@ create_author_table <- function(author_list, colnames)
                            nm     = colnames))
   }
   
-  actionButtons <- sapply(
-    X   = seq_len(nrow(df)),
-    FUN = build_action_buttons,
-    FALSE, "author")
+  #actionButtons <- sapply(
+  #  X   = seq_len(nrow(df)),
+  #  FUN = build_action_buttons,
+  #  FALSE, "author"
+  #)
 
-  df <- cbind.data.frame(df, Actions = actionButtons)
+  #df <- cbind.data.frame(df, Actions = actionButtons)
 
   DT::datatable(
     data      = df,

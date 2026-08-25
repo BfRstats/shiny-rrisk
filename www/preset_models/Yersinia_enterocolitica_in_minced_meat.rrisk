@@ -4,14 +4,19 @@
     "names": {
       "type": "character",
       "attributes": {},
-      "value": ["file_version", "node_list", "param_list", "global_expr", "global_expr_info", "author_list", "model_descr", "model_name"]
+      "value": ["file_version", "file_type", "node_list", "param_list", "global_expr", "global_expr_info", "author_list", "model_descr", "model_name"]
     }
   },
   "value": [
     {
-      "type": "double",
+      "type": "integer",
       "attributes": {},
-      "value": [3]
+      "value": [5]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["shiny-rrisk"]
     },
     {
       "type": "list",
@@ -29,7 +34,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -37,11 +42,6 @@
               "type": "character",
               "attributes": {},
               "value": ["param_dist"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["rrisk_yule_furry_process(n = ITER1D, N0 = N_mp, rate = mu_max_rg, ", "    time = Time_rg, type = SAMPLING_TYPE)"]
             },
             {
               "type": "character",
@@ -131,6 +131,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_yule_furry_process(n = ITER1D, N0 = N_mp, rate = mu_max_rg,time = Time_rg, type = SAMPLING_TYPE)"]
             }
           ]
         },
@@ -140,7 +145,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -148,11 +153,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["growth_rate_2(Temp_cg)"]
             },
             {
               "type": "character",
@@ -199,6 +199,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["growth_rate_2(Temp_cg)"]
             }
           ]
         },
@@ -208,7 +213,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -216,11 +221,6 @@
               "type": "character",
               "attributes": {},
               "value": ["param_dist"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["rrisk_rmodpert(n = ITER1D, min = 0, mode = 24, max = 96, type = SAMPLING_TYPE)"]
             },
             {
               "type": "character",
@@ -310,6 +310,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n = ITER1D, min = 0, mode = 24, max = 96, type = SAMPLING_TYPE)"]
             }
           ]
         },
@@ -319,7 +324,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -327,11 +332,6 @@
               "type": "character",
               "attributes": {},
               "value": ["param_dist"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["rrisk_rmodpert(n = ITER1D, min = 5, mode = 7, max = 9, type = SAMPLING_TYPE)"]
             },
             {
               "type": "character",
@@ -421,6 +421,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n = ITER1D, min = 5, mode = 7, max = 9, type = SAMPLING_TYPE)"]
             }
           ]
         },
@@ -430,7 +435,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -438,11 +443,6 @@
               "type": "character",
               "attributes": {},
               "value": ["param_dist"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["rrisk_rbinom(n = ITER1D, size = N_mb, prob = W_mp/W_b, type = SAMPLING_TYPE)"]
             },
             {
               "type": "character",
@@ -527,6 +527,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rbinom(n = ITER1D, size = N_mb, prob = W_mp/W_b, type = SAMPLING_TYPE)"]
             }
           ]
         },
@@ -536,7 +541,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -544,11 +549,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["growth_rate_2(Temp_rg)"]
             },
             {
               "type": "character",
@@ -595,6 +595,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["growth_rate_2(Temp_rg)"]
             }
           ]
         },
@@ -604,7 +609,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -612,11 +617,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "double",
-              "attributes": {},
-              "value": [48]
             },
             {
               "type": "character",
@@ -663,6 +663,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["48"]
             }
           ]
         },
@@ -672,7 +677,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -680,11 +685,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "double",
-              "attributes": {},
-              "value": [4]
             },
             {
               "type": "character",
@@ -731,6 +731,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["4"]
             }
           ]
         },
@@ -740,7 +745,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -748,11 +753,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["N_mb_func(n_pbb, N_bc, R_bd)"]
             },
             {
               "type": "character",
@@ -799,6 +799,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["N_mb_func(n_pbb, N_bc, R_bd)"]
             }
           ]
         },
@@ -808,7 +813,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -816,11 +821,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "double",
-              "attributes": {},
-              "value": [0.5]
             },
             {
               "type": "character",
@@ -867,6 +867,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["0.5"]
             }
           ]
         },
@@ -876,7 +881,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -884,11 +889,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "double",
-              "attributes": {},
-              "value": [900]
             },
             {
               "type": "character",
@@ -935,6 +935,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["900"]
             }
           ]
         },
@@ -944,7 +949,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -952,11 +957,6 @@
               "type": "character",
               "attributes": {},
               "value": ["param_dist"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["rrisk_rbinom(n = ITER1D, size = n_bb, prob = P_initial, type = SAMPLING_TYPE)"]
             },
             {
               "type": "character",
@@ -1041,6 +1041,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rbinom(n = ITER1D, size = n_bb, prob = P_initial, type = SAMPLING_TYPE)"]
             }
           ]
         },
@@ -1050,7 +1055,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1058,11 +1063,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["ceiling(N_ccg * S_bc)"]
             },
             {
               "type": "character",
@@ -1109,6 +1109,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["ceiling(N_ccg * S_bc)"]
             }
           ]
         },
@@ -1118,7 +1123,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1126,11 +1131,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["50/100"]
             },
             {
               "type": "character",
@@ -1177,6 +1177,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["50/100"]
             }
           ]
         },
@@ -1186,7 +1191,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1194,11 +1199,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["proc_bellies * W_b/W_bc"]
             },
             {
               "type": "character",
@@ -1245,6 +1245,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["proc_bellies * W_b/W_bc"]
             }
           ]
         },
@@ -1254,7 +1259,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1262,11 +1267,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["16.39/100"]
             },
             {
               "type": "character",
@@ -1313,6 +1313,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["16.39/100"]
             }
           ]
         },
@@ -1322,7 +1327,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1330,11 +1335,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["34/100"]
             },
             {
               "type": "character",
@@ -1381,6 +1381,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["34/100"]
             }
           ]
         },
@@ -1390,7 +1395,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1398,11 +1403,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "double",
-              "attributes": {},
-              "value": [7.5]
             },
             {
               "type": "character",
@@ -1449,6 +1449,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["7.5"]
             }
           ]
         },
@@ -1458,7 +1463,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1466,11 +1471,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["10^(C_cci) * 2^((Time_ccg - lambda_ccg)/D_ccg)"]
             },
             {
               "type": "character",
@@ -1517,6 +1517,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["10^(C_cci) * 2^((Time_ccg - lambda_ccg)/D_ccg)"]
             }
           ]
         },
@@ -1526,7 +1531,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group"]
+              "value": ["type", "display_code", "info", "group", "code"]
             }
           },
           "value": [
@@ -1534,11 +1539,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "double",
-              "attributes": {},
-              "value": [2000]
             },
             {
               "type": "character",
@@ -1576,6 +1576,11 @@
               "type": "character",
               "attributes": {},
               "value": ["Cutting and derinding"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["2000"]
             }
           ]
         },
@@ -1585,7 +1590,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1593,11 +1598,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["C_initial + I_cc"]
             },
             {
               "type": "character",
@@ -1644,6 +1644,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["C_initial + I_cc"]
             }
           ]
         },
@@ -1653,7 +1658,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1661,11 +1666,6 @@
               "type": "character",
               "attributes": {},
               "value": ["param_dist"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["rrisk_rdiscrete(n = ITER1D, x = c(20, 68), prob = c(0.8, 0.2), ", "    type = SAMPLING_TYPE)"]
             },
             {
               "type": "character",
@@ -1750,6 +1750,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rdiscrete(n = ITER1D, x = c(20, 68), prob = c(0.8, 0.2),type = SAMPLING_TYPE)"]
             }
           ]
         },
@@ -1759,7 +1764,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1767,11 +1772,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "double",
-              "attributes": {},
-              "value": [24]
             },
             {
               "type": "character",
@@ -1818,6 +1818,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["24"]
             }
           ]
         },
@@ -1827,7 +1832,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1835,11 +1840,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "double",
-              "attributes": {},
-              "value": [9.978]
             },
             {
               "type": "character",
@@ -1886,6 +1886,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["9.978"]
             }
           ]
         },
@@ -1895,7 +1900,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -1903,11 +1908,6 @@
               "type": "character",
               "attributes": {},
               "value": ["param_dist"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["rrisk_rnorm(n = ITER1D, mean = -2.565, sd = 0.736, lower = -1.85, ", "    type = SAMPLING_TYPE)"]
             },
             {
               "type": "character",
@@ -1997,6 +1997,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rnorm(n = ITER1D, mean = -2.565, sd = 0.736, lower = -1.85,type = SAMPLING_TYPE)"]
             }
           ]
         },
@@ -2006,7 +2011,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -2014,11 +2019,6 @@
               "type": "character",
               "attributes": {},
               "value": ["user_defined"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["-0.6"]
             },
             {
               "type": "character",
@@ -2065,6 +2065,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["-0.6"]
             }
           ]
         },
@@ -2074,7 +2079,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "exec_code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
+              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
             }
           },
           "value": [
@@ -2082,11 +2087,6 @@
               "type": "character",
               "attributes": {},
               "value": ["param_dist"]
-            },
-            {
-              "type": "language",
-              "attributes": {},
-              "value": ["rrisk_yule_furry_process(n = ITER1D, N0 = N_rg, rate = mu_max_cg, ", "    time = Time_cg, type = SAMPLING_TYPE)"]
             },
             {
               "type": "character",
@@ -2176,6 +2176,11 @@
             },
             {
               "type": "NULL"
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_yule_furry_process(n = ITER1D, N0 = N_rg, rate = mu_max_cg,time = Time_cg, type = SAMPLING_TYPE)"]
             }
           ]
         }
@@ -2268,15 +2273,10 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["growth_rate_2", "growth_rate", "N_mb_func"]
+          "value": ["growth_rate", "N_mb_func", "growth_rate_2"]
         }
       },
       "value": [
-        {
-          "type": "character",
-          "attributes": {},
-          "value": ["function(Temp)\n{\n    a <- 0.0242  # 1/h; growth rate at Temp = 0°C\n    Tref <- 7.092  # °C; if Temp = Tref, then growth_rate = a * exp(1)\n    a * exp(Temp/Tref)\n}"]
-        },
         {
           "type": "character",
           "attributes": {},
@@ -2286,6 +2286,11 @@
           "type": "character",
           "attributes": {},
           "value": ["Vectorize(\n    FUN = function(n_pbb, N_bc, R_bd)\n    {\n        sum(rbinom(n = n_pbb, size = N_bc, prob = R_bd))\n    },\n    vectorize.args = c(\"n_pbb\", \"N_bc\")\n)"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["function(Temp)\n{\n    a <- 0.0242  # 1/h; growth rate at Temp = 0°C\n    Tref <- 7.092  # °C; if Temp = Tref, then growth_rate = a * exp(1)\n    a * exp(Temp/Tref)\n}"]
         }
       ]
     },
@@ -2295,37 +2300,10 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["growth_rate_2", "growth_rate", "N_mb_func"]
+          "value": ["growth_rate", "N_mb_func", "growth_rate_2"]
         }
       },
       "value": [
-        {
-          "type": "list",
-          "attributes": {
-            "names": {
-              "type": "character",
-              "attributes": {},
-              "value": ["unit", "source", "descr"]
-            }
-          },
-          "value": [
-            {
-              "type": "character",
-              "attributes": {},
-              "value": ["1/h"]
-            },
-            {
-              "type": "character",
-              "attributes": {},
-              "value": ["Own approach. Critic on Ratkowsky model."]
-            },
-            {
-              "type": "character",
-              "attributes": {},
-              "value": ["Ratkowsky et al. showed that the model for chemical reaction rate constant $k = A\\,\\exp(-E/RT)$ does not work for modeling the temperature dependence of bacterial growth rates. They found, by chance, an empirical model $\\sqrt{r}=b\\,(T-T_0)$. \n\nInterestingly, the model $r = a\\,\\exp(T/T_0)$ fits the data as well. If using the Taylor series, the Ratkowsky model should be a linearization of this model till the quadratic term: $r = a\\,\\exp(T/T_{0,\\,\\text{new}}) \\approx A\\,T^2 + B\\,T + C = b\\,(T-T_{0,\\,\\text{Ratkowsky}})$\n\nThe new approach is nice, as we do not need the ifelse statement. It tells also a different story: the bacteria would still grow at lower temperatures than zero, because the phase shift of water to ice is not included in the model. This is also the case for the Ratkowksy  model, it is there just obfuscated.\n\n Fitted to the ComBase data."]
-            }
-          ]
-        },
         {
           "type": "list",
           "attributes": {
@@ -2376,7 +2354,34 @@
             {
               "type": "character",
               "attributes": {},
-              "value": ["The function calculates the total number of pathogenic *Y. enterocolitica* in a batch of minced meat:\nThis function is designed to:\n\nGenerate n_pbb binomial random variables, where:\n\n- n_pbb represents the number of potentially contaminated pork bellies\n- N_bc is the number of Y. enterocolitica on a contaminated belly cut\n- R_bd is the probability of bacteria remaining after derinding\n\nSum up all these random variables\n\nThis process effectively simulates the total number of Y. enterocolitica bacteria that end up in the batch from all contaminated belly cuts, taking into account:\n\n- The number of contaminated bellies\n- The number of bacteria on each contaminated belly\n- The probability of bacteria remaining after processing\n\nThis function implements the sum $\\sum_{i=1}^{n_{pdd}}\\,N_{bdr,\\,i}$. We needed to simplify the original approach, with $N_{bdr} = \\text{Binomial}(N_{bc},\\,R_{bd})$. The sum() function at the end adds up all these contributions, giving the total number of Y. enterocolitica in the batch (Nmb).\n\nIn order to compute the sum for each value of $n_{pbb}$, and $N_{bc}$, we have to loop over the produced 1D-MC vector for $n_{pbb}$, and $N_{bc}$. We do this here implictly by wrapping the function of interest in the R-function *Vectorize*."]
+              "value": ["The function calculates the total number of pathogenic *Y. enterocolitica* in a batch of minced meat.\n\nThis function is designed to generate n_pbb binomial random variables, where:\n\n- n_pbb represents the number of potentially contaminated pork bellies\n- N_bc is the number of Y. enterocolitica on a contaminated belly cut\n- R_bd is the probability of bacteria remaining after derinding\n\nSum up all these random variables\n\nThis process effectively simulates the total number of Y. enterocolitica bacteria that end up in the batch from all contaminated belly cuts, taking into account:\n\n- The number of contaminated bellies\n- The number of bacteria on each contaminated belly\n- The probability of bacteria remaining after processing\n\nThis function implements the sum $\\sum_{i=1}^{n_{pdd}}\\,N_{bdr,\\,i}$. We needed to simplify the original approach, with $N_{bdr} = \\text{Binomial}(N_{bc},\\,R_{bd})$. The sum() function at the end adds up all these contributions, giving the total number of Y. enterocolitica in the batch (Nmb).\n\nIn order to compute the sum for each value of $n_{pbb}$, and $N_{bc}$, we have to loop over the produced 1D-MC vector for $n_{pbb}$, and $N_{bc}$. We do this here implictly by wrapping the function of interest in the R-function *Vectorize*."]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["unit", "source", "descr"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["1/h"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Own approach. Critic on Ratkowsky model."]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Ratkowsky et al. showed that the model for chemical reaction rate constant $k = A\\,\\exp(-E/RT)$ does not work for modeling the temperature dependence of bacterial growth rates. They found, by chance, an empirical model $\\sqrt{r}=b\\,(T-T_0)^2$. \n\nInterestingly, the model $r = a\\,\\exp(T/T_0)$ fits the data as well. If using the Taylor series, the Ratkowsky model should be a linearization of this model till the quadratic term: $r = a\\,\\exp(T/T_{0,\\,\\text{new}}) \\approx A\\,T^2 + B\\,T + C = b\\,(T-T_{0,\\,\\text{Ratkowsky}})^2$\n\nThe new approach is nice, as we do not need the ifelse statement. It tells also a different story: the bacteria would still grow at lower temperatures than zero, because the phase shift of water to ice is not included in the model. This is also the case for the Ratkowksy  model, it is there just obfuscated.\n\nThe parameter can be interpreted as:\n\n- *a* is the growth rate at T = 0 °C\n- *Tref* describes how fast the growth rate increases with temperature. \n\nMaybe this is easier to see in the log. version of the equation: $\\ln(r) = \\ln(a) + \\frac{T}{T_0}$.\n\n Fitted to the ComBase data."]
             }
           ]
         }
@@ -2388,7 +2393,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["Robert Opitz", "Thomas Selhorst", "Mariia Galaburda"]
+          "value": ["Robert Opitz", "Mariia Galaburda", "Thomas Selhorst"]
         }
       },
       "value": [
@@ -2432,17 +2437,17 @@
             {
               "type": "character",
               "attributes": {},
-              "value": ["Thomas Selhorst"]
+              "value": ["Mariia Galaburda"]
             },
             {
               "type": "character",
               "attributes": {},
-              "value": ["BfR"]
+              "value": ["National University of Life and Environmental Sciences of Ukraine · Faculty of Veterinary Medicine"]
             },
             {
               "type": "character",
               "attributes": {},
-              "value": ["thomas.selhorst@gmail.com"]
+              "value": ["galaburda_ma@nubip.edu.ua"]
             }
           ]
         },
@@ -2459,17 +2464,17 @@
             {
               "type": "character",
               "attributes": {},
-              "value": ["Mariia Galaburda"]
+              "value": ["Thomas Selhorst"]
             },
             {
               "type": "character",
               "attributes": {},
-              "value": ["National University of Life and Environmental Sciences of Ukraine · Faculty of Veterinary Medicine"]
+              "value": ["German Federal Institute for Risk Assessment (BfR) "]
             },
             {
               "type": "character",
               "attributes": {},
-              "value": ["galaburda_ma@nubip.edu.ua"]
+              "value": ["thomas.selhorst@gmail.com"]
             }
           ]
         }

@@ -34,11 +34,26 @@ add_change_global_object_dialog <- function(global_obj = list(),
     shinyAce::aceEditor(outputId = "global_object_definition", 
                         mode     = "r", 
                         height   = "200px", 
-                        value    = object_code),
+                        value    = object_code,
+                        autoScrollEditorIntoView = TRUE),
     size   = "l",
-    footer = tagList(modalButton("Cancel"),
-                     actionButton(inputId = "btn_add_change_global_obj",
-                                  label   = add_change_btn_text))
+    footer = tagList(
+      fluidRow(
+        column(
+          width = 1,
+          if (!is_add_dialog)
+          actionButton(input = "btn_delete_global_obj",
+                       label = "Delete Parameter of Function")
+        ),
+        column(
+          width = 5,
+          modalButton("Cancel"),
+          actionButton(inputId = "btn_add_change_global_obj",
+                       label   = add_change_btn_text),
+          offset = 6
+        )
+      )
+    )
   )
 }
 
@@ -75,13 +90,13 @@ create_global_object_table <- function(global_object_list, colnames)
                            nm     = colnames))
   }
   
-  actionButtons <- sapply(
-    X   = seq_len(nrow(df)),
-    FUN = build_action_buttons,
-    FALSE, "global_obj"
-  )
+  #actionButtons <- sapply(
+  #  X   = seq_len(nrow(df)),
+  #  FUN = build_action_buttons,
+  #  FALSE, "global_obj"
+  #)
   
-  df <- cbind.data.frame(df, Actions = actionButtons)
+  #df <- cbind.data.frame(df, Actions = actionButtons)
   
   DT::datatable(
     data      = df,
@@ -90,7 +105,7 @@ create_global_object_table <- function(global_object_list, colnames)
     colnames  = colnames(df),
     selection = 'single',
     options   = list(columnDefs = list(list(width = '30%',
-                                           targets = c(2,4))),
+                                            targets = c(2,4))),
                      paging     = FALSE),
     callback = DT::JS(
       "table.on('dblclick', 'td',", 

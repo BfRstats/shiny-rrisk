@@ -100,9 +100,21 @@ get_add_change_dialog <- function(node_name, node_type, node_info = NULL,
     ),
     size = "l",
     footer = htmltools::tagList(
-      modalButton("Cancel"),
-      actionButton(inputId = "btn_add_and_change_item",
-                   label   = label_ok_button)
+      fluidRow(
+        column(
+          width = 1,
+          if (!is_add_dialog ){
+            actionButton(inputId = "btn_delete_item",
+                         label   = "delete node")
+          }),
+          column(
+            width = 3,
+            modalButton("Cancel"),
+            actionButton(inputId = "btn_add_and_change_item",
+                         label   = label_ok_button),
+            offset = 8
+        )
+      )
     )
   )
 }
@@ -321,7 +333,8 @@ set_fitted_dist_input_ui <- function(rrisk_dist_fit,
             textAreaInput(
               inputId = "rrisk_dist_fit_cdf_y",
               label   = "user provided probs",
-              value   = paste(rrisk_dist_fit$provided_data_cdf, collapse = ", "),
+              value   = paste(rrisk_dist_fit$provided_data_cdf, 
+                              collapse = ", "),
               width   = "100%"
             )
           )
@@ -351,7 +364,8 @@ set_fitted_dist_input_ui <- function(rrisk_dist_fit,
             )
           },
           seq_along(rrisk_dist_fit$selected_fit$par), 
-          names(rrisk_dist_fit$selected_fit$par), rrisk_dist_fit$selected_fit$par,
+          names(rrisk_dist_fit$selected_fit$par), 
+          rrisk_dist_fit$selected_fit$par,
           SIMPLIFY = FALSE
         )
       ),
@@ -366,29 +380,27 @@ set_fitted_dist_input_ui <- function(rrisk_dist_fit,
 create_model_table <- function(df, colnames) 
 {
   # generate action button for data frame
-  actionButtons <- mapply(
-    FUN = build_action_buttons,
-    seq_len(nrow(df)), df$node_type == "implicit",
-    MoreArgs = list(item = "item")
-  )
+  #actionButtons <- mapply(
+  #  FUN = build_action_buttons,
+  #  seq_len(nrow(df)), df$node_type == "implicit",
+  #  MoreArgs = list(item = "item")
+  #)
   # remove entry node_type from data frame
   df$node_type <- NULL
   # sort data frame according to colnames
   if (nrow(df) > 0) df <- df[,names(colnames)]
   # add ID-Numbers (first column) and action buttons (last column) to data frame
-  df <- cbind.data.frame(seq_len(nrow(df)), df, Actions = actionButtons)
+  df <- cbind.data.frame(seq_len(nrow(df)), df)#, Actions = actionButtons)
   
   DT::datatable(
     data      = df,
     # Need to disable escaping for html as string to work
     escape    = FALSE,
-    #colnames  = c("ID" = 1),
-    colnames  = c("ID", unname(colnames), "Actions"),
+    colnames  = c("ID", unname(colnames)),#, "Actions"),
     rownames  = FALSE,
     selection = 'single',
-    options   = list(
-      paging      = FALSE
-    ),
+    options   = list(paging     = FALSE, 
+                     columnDefs = list(list(width = "33%", targets = 6))),
     callback = DT::JS(
       "table.on('dblclick', 'td',", 
       "  function() {",

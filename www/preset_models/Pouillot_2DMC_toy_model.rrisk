@@ -4,14 +4,19 @@
     "names": {
       "type": "character",
       "attributes": {},
-      "value": ["file_version", "node_list", "param_list", "global_expr", "global_expr_info", "author_list", "model_descr", "model_name"]
+      "value": ["file_version", "file_type", "node_list", "param_list", "global_expr", "global_expr_info", "author_list", "model_descr", "model_name"]
     }
   },
   "value": [
     {
       "type": "integer",
       "attributes": {},
-      "value": [4]
+      "value": [5]
+    },
+    {
+      "type": "character",
+      "attributes": {},
+      "value": ["shiny-rrisk"]
     },
     {
       "type": "list",
@@ -29,7 +34,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "code"]
+              "value": ["type", "code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
             }
           },
           "value": [
@@ -37,6 +42,11 @@
               "type": "character",
               "attributes": {},
               "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rmodpert(n=ITER2D,min=1e-04,mode=0.0012,max=0.01,type=SAMPLING_TYPE)"]
             },
             {
               "type": "character",
@@ -61,7 +71,7 @@
                 {
                   "type": "character",
                   "attributes": {},
-                  "value": ["The mode was determined by Delignette-Muller and Cornu, Int. J. of. Food Micro, 128, 2008"]
+                  "value": ["The mode was determined by Delignette-Muller and Cornu, Int. J. of. Food Micro, 128, 2008, https://doi.org/10.1016/j.ijfoodmicro.2008.05.040"]
                 },
                 {
                   "type": "character",
@@ -125,9 +135,7 @@
               ]
             },
             {
-              "type": "character",
-              "attributes": {},
-              "value": ["rrisk_rmodpert(n = 1, min = 1e-04, mode = 0.0012, max = 0.01,type = SAMPLING_TYPE)"]
+              "type": "NULL"
             }
           ]
         },
@@ -764,7 +772,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["type", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data", "code"]
+              "value": ["type", "code", "display_code", "info", "group", "mc_dim", "dist_def", "bootstrap_data"]
             }
           },
           "value": [
@@ -772,6 +780,11 @@
               "type": "character",
               "attributes": {},
               "value": ["param_dist"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["rrisk_rweibull(n=ITER1D,shape=bs_shape_uncert,scale=bs_scale_uncert,type=SAMPLING_TYPE)"]
             },
             {
               "type": "character",
@@ -796,7 +809,7 @@
                 {
                   "type": "character",
                   "attributes": {},
-                  "value": ["Delignette-Muller and Cornu, Int. J. of. Food Micro, 128, 2008"]
+                  "value": ["Delignette-Muller and Cornu, Int. J. of. Food Micro, 128, 2008, https://doi.org/10.1016/j.ijfoodmicro.2008.05.040"]
                 },
                 {
                   "type": "character",
@@ -856,11 +869,6 @@
             },
             {
               "type": "NULL"
-            },
-            {
-              "type": "character",
-              "attributes": {},
-              "value": ["rrisk_rweibull(n = ITER1D, shape = bs_shape_uncert, scale = bs_scale_uncert,type = SAMPLING_TYPE)"]
             }
           ]
         },
@@ -1301,31 +1309,7 @@
               "value": ["serving_bs_generator[['bs_shape_uncert']]"]
             },
             {
-              "type": "list",
-              "attributes": {
-                "names": {
-                  "type": "character",
-                  "attributes": {},
-                  "value": ["unit", "source", "descr"]
-                }
-              },
-              "value": [
-                {
-                  "type": "character",
-                  "attributes": {},
-                  "value": [""]
-                },
-                {
-                  "type": "character",
-                  "attributes": {},
-                  "value": [""]
-                },
-                {
-                  "type": "character",
-                  "attributes": {},
-                  "value": ["This node contains the value for the shape parameter for the Weibull distribution."]
-                }
-              ]
+              "type": "NULL"
             },
             {
               "type": "character",
@@ -1371,31 +1355,7 @@
               "value": ["serving_bs_generator[['bs_scale_uncert']]"]
             },
             {
-              "type": "list",
-              "attributes": {
-                "names": {
-                  "type": "character",
-                  "attributes": {},
-                  "value": ["unit", "source", "descr"]
-                }
-              },
-              "value": [
-                {
-                  "type": "character",
-                  "attributes": {},
-                  "value": [""]
-                },
-                {
-                  "type": "character",
-                  "attributes": {},
-                  "value": [""]
-                },
-                {
-                  "type": "character",
-                  "attributes": {},
-                  "value": ["This node contains the value for the scale parameter for the Weibull distribtuion."]
-                }
-              ]
+              "type": "NULL"
             },
             {
               "type": "character",
@@ -1458,7 +1418,7 @@
                 {
                   "type": "character",
                   "attributes": {},
-                  "value": ["Delignette-Muller, M.L., Cornu, M., 2008. Quantitative risk assessment for Escherichia\ncoli O157:H7 in frozen ground beef patties consumed by young children in French\nhouseholds. International Journal of Food Microbiology 128, 158–164."]
+                  "value": ["Delignette-Muller, M.L., Cornu, M., 2008. Quantitative risk assessment for Escherichia\ncoli O157:H7 in frozen ground beef patties consumed by young children in French\nhouseholds. International Journal of Food Microbiology 128, 158–164. https://doi.org/10.1016/j.ijfoodmicro.2008.05.040"]
                 },
                 {
                   "type": "character",
@@ -1515,7 +1475,7 @@
                             "names": {
                               "type": "character",
                               "attributes": {},
-                              "value": ["bs_shape_uncert, bs_scale_uncert.bs_shape_uncert, bs_scale_uncert.bs_shape_uncert, bs_scale_uncert.bs_shape_uncert, bs_scale_uncert"]
+                              "value": ["bs_shape_uncert, bs_scale_uncert.bs_shape_uncert, bs_scale_uncert.bs_shape_uncert, bs_scale_uncert.bs_shape_uncert, bs_scale_uncert.bs_shape_uncert, bs_scale_uncert"]
                             }
                           },
                           "value": ["fit_to_weibull"]

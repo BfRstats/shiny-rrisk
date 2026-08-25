@@ -32,7 +32,7 @@ documentation_server <- function(input, output, rrisk_model)
   observeEvent(
     eventExpr   = input$btn_delete_author,
     handlerExpr = {
-      item_num <- parseActionButton(input$btn_delete_author)
+      #item_num <- parseActionButton(input$btn_delete_author)
       myShinyAlert(
         title             = "Delete author?",
         text              = "Do you want to delete author?",
@@ -40,8 +40,10 @@ documentation_server <- function(input, output, rrisk_model)
         showCancelButton  = TRUE,
         confirmButtonText = "Delete",
         callbackR         = function(value) {
-          if (isTRUE(value))
-            rrisk_model()$remove_author(list_num = item_num)
+          if (isTRUE(value)) {
+            rrisk_model()$remove_author(author_name = input$author_name_text)
+            removeModal()
+          }
         }
       )
     }
